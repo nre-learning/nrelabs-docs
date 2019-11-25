@@ -2,20 +2,20 @@
 
 * [NRE Labs Curriculum Docs](README.md)
 
-## Introduction to NRE Labs
+## Introduction
 
-* [What is NRE Labs?](introduction-to-nre-labs/what-is-the-nre-labs-curriculum.md)
-* [What is Antidote?](introduction-to-nre-labs/what-is-antidote.md)
+* [What is NRE Labs?](introduction/what-is-the-nre-labs-curriculum.md)
+* [What is Antidote?](introduction/what-is-antidote.md)
 
-## Creating Curriculum Content
+## Creating and Contributing <a id="creating-contributing"></a>
 
-* [Creating a New Lesson](creating-curriculum-content/creating-a-new-lesson.md)
-* [NRE Labs Development Environment](creating-curriculum-content/selfmedicate.md)
-* [How to Contribute](creating-curriculum-content/the-nre-labs-curriculum-contribution-lifecycle.md)
+* [Contributing to NRE Labs](creating-contributing/the-nre-labs-curriculum-contribution-lifecycle.md)
+* [Creating a New Lesson](creating-contributing/creating-a-new-lesson.md)
+* [NRE Labs Development Environment](creating-contributing/selfmedicate.md)
 
-## NRE Labs Release Planning
+## Release Planning
 
-* [Curriculum Release Planning](nre-labs-release-planning/curriculum-release-planning.md)
+* [Curriculum Release Planning](release-planning/curriculum-release-planning.md)
 
 ## Additional Resources
 

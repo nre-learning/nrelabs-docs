@@ -1,7 +1,6 @@
 # Table of contents
 
-* [Initial page](README.md)
-* [Untitled](untitled.md)
+* [NRE Labs Curriculum Docs](README.md)
 
 ## Introduction to NRE Labs
 

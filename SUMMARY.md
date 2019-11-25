@@ -8,9 +8,10 @@
 
 ## Creating and Contributing <a id="creating-contributing"></a>
 
-* [Contributing to NRE Labs](creating-contributing/the-nre-labs-curriculum-contribution-lifecycle.md)
-* [Creating a New Lesson](creating-contributing/creating-a-new-lesson.md)
-* [Local Preview](creating-contributing/selfmedicate.md)
+* [Communicating Your Idea](creating-contributing/communicating-your-idea.md)
+* [Bootstrapping Your Content](creating-contributing/creating-a-new-lesson.md)
+* [Previewing Locally](creating-contributing/selfmedicate.md)
+* [Contribute Your Content](creating-contributing/the-nre-labs-curriculum-contribution-lifecycle.md)
 
 ## Release Planning
 

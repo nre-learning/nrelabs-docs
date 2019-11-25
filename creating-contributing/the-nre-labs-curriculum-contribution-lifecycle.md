@@ -1,4 +1,4 @@
-# Contributing to NRE Labs
+# Contribute Your Content
 
 Contributing to the curriculum is fairly straightforward, but you should consider the guidance in this document to ensure you spend your time wisely. The last thing we want is for you to dedicate days or even weeks of your time to building a lesson only to find out someone is already working on something similar.
 

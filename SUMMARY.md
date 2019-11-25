@@ -4,15 +4,22 @@
 
 ## Introduction to NRE Labs
 
-* [What is the NRE Labs Curriculum?](introduction-to-nre-labs/what-is-the-nre-labs-curriculum.md)
+* [What is NRE Labs?](introduction-to-nre-labs/what-is-the-nre-labs-curriculum.md)
 * [What is Antidote?](introduction-to-nre-labs/what-is-antidote.md)
-* [The NRE Labs Curriculum Contribution Lifecycle](introduction-to-nre-labs/the-nre-labs-curriculum-contribution-lifecycle.md)
 
 ## Creating Curriculum Content
 
-* [Local Development With Selfmedicate](creating-curriculum-content/selfmedicate.md)
+* [Creating a New Lesson](creating-curriculum-content/creating-a-new-lesson.md)
+* [NRE Labs Development Environment](creating-curriculum-content/selfmedicate.md)
+* [How to Contribute](creating-curriculum-content/the-nre-labs-curriculum-contribution-lifecycle.md)
+
+## NRE Labs Release Planning
+
+* [Curriculum Release Planning](nre-labs-release-planning/curriculum-release-planning.md)
 
 ## Additional Resources
 
+* [Weekly Standups](additional-resources/standups.md)
+* [Community Resources](additional-resources/community-resources.md)
 * [Antidote Documentation](https://antidoteproject.rtfd.io)
 

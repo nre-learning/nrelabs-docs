@@ -1,4 +1,4 @@
-# What is the NRE Labs Curriculum?
+# What is NRE Labs?
 
 TBD
 

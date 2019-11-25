@@ -8,7 +8,6 @@
 
 ## Creating and Contributing <a id="creating-contributing"></a>
 
-* [Collaborate and Listen](creating-contributing/collaborate-and-listen.md)
 * [Contributing to NRE Labs](creating-contributing/the-nre-labs-curriculum-contribution-lifecycle.md)
 * [Creating a New Lesson](creating-contributing/creating-a-new-lesson.md)
 * [Local Preview](creating-contributing/selfmedicate.md)

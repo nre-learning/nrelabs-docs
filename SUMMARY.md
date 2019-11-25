@@ -1,17 +1,17 @@
 # Table of contents
 
-* [NRE Labs Curriculum Docs](README.md)
+* [Welcome!](README.md)
 
 ## Introduction
 
 * [What is NRE Labs?](introduction/what-is-the-nre-labs-curriculum.md)
-* [What is Antidote?](introduction/what-is-antidote.md)
 
 ## Creating and Contributing <a id="creating-contributing"></a>
 
+* [Collaborate and Listen](creating-contributing/collaborate-and-listen.md)
 * [Contributing to NRE Labs](creating-contributing/the-nre-labs-curriculum-contribution-lifecycle.md)
 * [Creating a New Lesson](creating-contributing/creating-a-new-lesson.md)
-* [NRE Labs Development Environment](creating-contributing/selfmedicate.md)
+* [Local Preview](creating-contributing/selfmedicate.md)
 
 ## Release Planning
 

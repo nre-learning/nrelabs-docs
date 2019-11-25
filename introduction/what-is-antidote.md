@@ -1,4 +1,0 @@
-# What is Antidote?
-
-TBD
-

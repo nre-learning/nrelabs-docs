@@ -24,41 +24,10 @@ This gives other community members a chance to review your plan and maybe addres
 
 Here are some tips for a great lesson:
 
-* Lessons in NRE Labs should demonstrate something that a network engineer could easily replicate
-
-  in their own environment. Topics we teach here should be aimed at getting the learner skilled up enough
-
-  to actually put these concepts into production. So, the more practical the better.
-
-* Individual labs within a lesson should be kept to a reasonable length. The general rule of thumb is that
-
-  a single lab can be finished in about 5 minutes. A lab that is too short, and the learner will feel like they're not
-
-  learning a lot. Too long and the learner won't feel like they're accomplishing anything. So, within a single lesson,
-
-  be very intentional with how you're breaking content up into different labs.
-
-* Some lessons can be repeated 2 or 3 times.  For instance, in addition to the
-
-  NAPALM lesson, you could show the user how to collect system information using
-
-  an alternate method.  You should explain why a network engineer would want to
-
-  choose one method over another.  In the case of the first lesson, NAPALM is a
-
-  somewhat limited tool.  If the user needs additional information, they would
-
-  need to do something different.  They could use PyEZ, for instance.
-
-* Some lessons could be a group of inter-related tasks.  A troubleshooting
-
-  workflow that helps a network engineer locate a device in the network, or the
-
-  path between two devices, could be broken up into a set of distinct tasks.
-
-  Not every task has to be automated, but some could be, and the lessons could
-
-  reflect this.
+* Lessons in NRE Labs should demonstrate something that a network engineer could easily replicate in their own environment. Topics we teach here should be aimed at getting the learner skilled up enough to actually put these concepts into production. So, the more practical the better.
+* Individual labs within a lesson should be kept to a reasonable length. The general rule of thumb is that a single lab can be finished in about 5 minutes. A lab that is too short, and the learner will feel like they're not learning a lot. Too long and the learner won't feel like they're accomplishing anything. So, within a single lesson, be very intentional with how you're breaking content up into different labs.
+* Some lessons can be repeated 2 or 3 times.  For instance, in addition to the NAPALM lesson, you could show the user how to collect system information using an alternate method.  You should explain why a network engineer would want to choose one method over another.  In the case of the first lesson, NAPALM is a somewhat limited tool. If the user needs additional information, they would need to do something different.  They could use PyEZ, for instance.
+* Some lessons could be a group of inter-related tasks.  A troubleshooting workflow that helps a network engineer locate a device in the network, or the path between two devices, could be broken up into a set of distinct tasks. Not every task has to be automated, but some could be, and the lessons could reflect this.
 
 ## Step 3 - Put It Together
 

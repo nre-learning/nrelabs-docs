@@ -10,7 +10,9 @@
 
 * [Communicating Your Idea](creating-contributing/communicating-your-idea.md)
 * [Bootstrapping Your Content](creating-contributing/creating-a-new-lesson.md)
-* [Previewing Locally](creating-contributing/selfmedicate.md)
+* [Previewing Locally](creating-contributing/selfmedicate/README.md)
+  * [Vagrant](creating-contributing/selfmedicate/vagrant.md)
+  * [Selfmedicate](creating-contributing/selfmedicate/selfmedicate.md)
 * [Contribute Your Content](creating-contributing/the-nre-labs-curriculum-contribution-lifecycle.md)
 
 ## Release Planning

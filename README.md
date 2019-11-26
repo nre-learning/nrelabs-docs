@@ -4,7 +4,7 @@ Welcome! This is the documentation for the NRE Labs project - an open source ini
 
 > NOTE: This is **not** the documentation for the Antidote platform. That continues to be available at [https://antidoteproject.rtfd.io](https://antidoteproject.rtfd.io)
 
-Please use the navigation links to the 
+Please use the navigation links to the left to navigate this site.
 
 
 

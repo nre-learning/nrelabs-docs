@@ -8,12 +8,11 @@ Contributing to the NRE Labs Curriculum should follow a four-step lifecycle. Thi
 
 ![](https://github.com/nre-learning/nrelabs-docs/tree/09d474a672ed4021f6dac96449c0748f5acf39f0/creating-curriculum-content/assets/lifecycle.png)
 
-
 ## Step 3 - Put It Together
 
 Okay. You've determined that you have a good idea for a lesson, and no one else is working on it. Let's get you started!
 
-As is common on Github-based projects, direct commit access to the main NRE Labs curriculum repository is not permitted. To be able to commit new or modified curriculum content, you first need to [fork the NRE Labs curriculum repository](https://github.com/nre-learning/nrelabs-curriculum/fork) This allows you to create a copy of the curriculum at a location of your choosing \(usually underneath your own Github username\) that you have permissions to push to. Once you have your fork, you can clone from there and start making commits as you add or change lesson content.
+
 
 Next - you'll want a local copy of the Antidote stack running locally so you can rapidly test and iterate on the changes you've made. Ironing out all of the bugs locally before you submit a pull request makes the review process much smoother. For more info, see the :ref:`selfmedicate <selfmedicate>` documentation.
 

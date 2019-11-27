@@ -14,17 +14,14 @@
   * [Vagrant Environment](creating-contributing/selfmedicate/vagrant.md)
   * [Selfmedicate](creating-contributing/selfmedicate/selfmedicate.md)
 * [Contributing Your Content](creating-contributing/the-nre-labs-curriculum-contribution-lifecycle.md)
-* [Curriculum Release Planning](creating-contributing/curriculum-release-planning.md)
 
-## Antidote
+## Curriculum Release Process
 
-* [What is Antidote?](antidote/what-is-antidote/README.md)
-  * [Architecture](antidote/what-is-antidote/architecture.md)
-* [Resource Reference](antidote/resource-reference.md)
-* [Contributing to Antidote](antidote/contributing-to-antidote.md)
+* [Curriculum Release Planning](curriculum-release-process/curriculum-release-planning.md)
 
 ## Additional Resources
 
 * [Weekly Standups](additional-resources/standups.md)
 * [Community Resources](additional-resources/community-resources.md)
+* [Antidote Documentation](https://antidoteproject.rtfd.io)
 

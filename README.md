@@ -1,10 +1,10 @@
 # Welcome!
 
-Welcome! This is the documentation for the NRE Labs project - an open source initiative to make it easy to learn about network automation and network reliability engineering by democratizing the learning content, and making it available for free in the browser.
+[NRE Labs](https://labs.networkreliability.engineering) is an open-source project and website for teaching network automation using real virtual environments that are provisioned on-demand and presented interactively in your web browser.
 
-> NOTE: This is **not** the documentation for the Antidote platform. That continues to be available at [https://antidoteproject.rtfd.io](https://antidoteproject.rtfd.io)
+It's powered by the [Antidote](https://github.com/nre-learning/antidote) platform, which provides an abstraction to enable curriculum-as-code, meaning all learning materials can be represented as simple text files, stored in a Git repository.
 
-Please use the navigation links to the left to navigate this site.
+Documentation for both can be found in the navigation menus to the left.
 
 
 

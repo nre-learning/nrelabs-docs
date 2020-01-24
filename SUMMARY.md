@@ -2,26 +2,38 @@
 
 * [Welcome!](README.md)
 
-## Introduction
-
-* [What is NRE Labs?](introduction/what-is-the-nre-labs-curriculum.md)
-
 ## Creating and Contributing <a id="creating-contributing"></a>
 
-* [Communicating Your Idea](creating-contributing/communicating-your-idea.md)
-* [Bootstrapping Your Content](creating-contributing/creating-a-new-lesson.md)
-* [Previewing Locally](creating-contributing/selfmedicate/README.md)
-  * [Vagrant Environment](creating-contributing/selfmedicate/vagrant.md)
-  * [Selfmedicate](creating-contributing/selfmedicate/selfmedicate.md)
-* [Contributing Your Content](creating-contributing/the-nre-labs-curriculum-contribution-lifecycle.md)
+* [First Steps](creating-contributing/getting-started.md)
+* [Previewing Locally](creating-contributing/previewing-locally.md)
+* [Contributing Your Content](creating-contributing/the-nre-labs-curriculum-contribution-lifecycle/README.md)
+  * [Curriculum Standards](creating-contributing/the-nre-labs-curriculum-contribution-lifecycle/curriculum-standards.md)
+  * [NRE Labs Public Test Realm \(PTR\)](creating-contributing/the-nre-labs-curriculum-contribution-lifecycle/nre-labs-public-test-realm-ptr.md)
+* [Curriculum Release Process](creating-contributing/curriculum-release-process.md)
 
-## Curriculum Release Process
+## Other Resources
 
-* [Curriculum Release Planning](curriculum-release-process/curriculum-release-planning.md)
+* [NRE Labs Git Repositories](other-resources/nre-labs-git-repositories.md)
+* [Help! I'm Not A Developer!](other-resources/help-im-not-a-developer.md)
+* [Tips and FAQs](other-resources/tips-and-faqs.md)
+* [The Learner's Guide to Jupyter Notebooks](other-resources/the-learners-guide-to-jupyter-notebooks.md)
 
-## Additional Resources
+## Antidote
 
-* [Weekly Standups](additional-resources/standups.md)
-* [Community Resources](additional-resources/community-resources.md)
-* [Antidote Documentation](https://antidoteproject.rtfd.io)
+* [Platform Documentation](antidote/platform-documentation/README.md)
+  * [High-Level Architecture](antidote/platform-documentation/antidote-architecture.md)
+  * [Syringe](antidote/platform-documentation/syringe.md)
+  * [Antidote-Web](antidote/platform-documentation/antidote-web.md)
+* [Object Reference](antidote/object-reference/README.md)
+  * [Images](antidote/object-reference/images.md)
+  * [Lessons](antidote/object-reference/lessons/README.md)
+    * [Stages](antidote/object-reference/lessons/stages.md)
+    * [Endpoints](antidote/object-reference/lessons/endpoints.md)
+    * [Presentations](antidote/object-reference/lessons/presentations.md)
+    * [Connecting Endpoints](antidote/object-reference/lessons/connecting-endpoints.md)
+    * [Endpoint Configuration](antidote/object-reference/lessons/endpoint-configuration.md)
+  * [Collections](antidote/object-reference/collections.md)
+* [Development](antidote/development/README.md)
+  * [Hacking Instructions](antidote/development/hacking-instructions.md)
+  * [Antidote Release Process](antidote/development/antidote-release-process.md)
 

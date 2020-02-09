@@ -20,17 +20,16 @@
 
 ## Antidote
 
-* [Platform Documentation](antidote/platform-documentation/README.md)
-  * [High-Level Architecture](antidote/platform-documentation/antidote-architecture.md)
-  * [Syringe](antidote/platform-documentation/syringe.md)
-  * [Antidote-Web](antidote/platform-documentation/antidote-web.md)
+* [High-Level Architecture](antidote/antidote-architecture/README.md)
+  * [Antidote-Web](antidote/antidote-architecture/antidote-web.md)
+  * [Syringe](antidote/antidote-architecture/syringe.md)
 * [Object Reference](antidote/object-reference/README.md)
   * [Images](antidote/object-reference/images.md)
   * [Lessons](antidote/object-reference/lessons/README.md)
     * [Stages](antidote/object-reference/lessons/stages.md)
     * [Endpoints](antidote/object-reference/lessons/endpoints.md)
     * [Presentations](antidote/object-reference/lessons/presentations.md)
-    * [Connecting Endpoints](antidote/object-reference/lessons/connecting-endpoints.md)
+    * [Connections](antidote/object-reference/lessons/connections.md)
     * [Endpoint Configuration](antidote/object-reference/lessons/endpoint-configuration.md)
   * [Collections](antidote/object-reference/collections.md)
 * [Development](antidote/development/README.md)

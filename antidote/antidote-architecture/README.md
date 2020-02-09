@@ -6,19 +6,15 @@ To know more about Antidote as a platform, it's important to first understand it
 
 ### Curriculum
 
-All of the lessons and labs are defined as a standalone curriculum. The platform underneath is built to treat this as a modular component. For instance, the :ref:`NRE Labs curriculum <contrib-curriculum>` is certainly the most popular curriculum currently available, and it's what we are serving via the `NRE Labs <https://labs.networkreliability.engineering>`\_ site, but no aspect of this curriculum is baked into the Antidote platform. Other curricula can be developed and run within the antidote platform.
+All of the lessons and labs are defined as a standalone curriculum. The platform underneath is built to treat this as a modular component. For instance, the [NRE Labs curriculum](https://github.com/nre-learning/nrelabs-curriculum) is certainly the most popular curriculum currently available, and it's what we are serving via the [NRE Labs](https://nrelabs.io) site, but no aspect of this curriculum is baked into the Antidote platform. Other curricula can be developed and run within the antidote platform.
 
 ### Platform
 
-This is where the custom software components of Antidote live. In particular, `Syringe <https://github.com/nre-learning/syringe>` _provides an upstream API for provisioning lesson resources, then makes the relevant calls to Kubernetes to make sure the relevant, specific compute resources and policies are instantiated. `Antidote-web <https://github.com/nre-learning/antidote-web>`_ consumes the API offered by Syringe and is responsible for providing a fully web-based experience for interacting with lesson resources.
+This is where the custom software components of Antidote live. In particular, [Syringe](https://github.com/nre-learning/syringe) __provides an upstream API for provisioning lesson resources, then makes the relevant calls to Kubernetes to make sure the relevant, specific compute resources and policies are instantiated_._ [Antidote-web](https://github.com/nre-learning/antidote-web) consumes the API offered by Syringe and is responsible for providing a fully web-based experience for interacting with lesson resources.
 
 ### Infrastructure
 
-The :ref:`NRE Labs <contrib-curriculum>` instance of Antidote leverages Google Compute Platform \(specifically GCE virtual machines\) due to the availability of hardware-assisted virtualization capabilities, which allows us to run virtual network devices on the platform without an unacceptable performance penalty. Antidote itself tightly integrates with Kubernetes for compute orchestration, however, so while Kubernetes is a hard requirement, GCP is not, though a good idea considering the aforementioned HW virtualization capabilities.
-
-Kubernetes was selected as a common substrate for the Antidote platform for better portability between cloud providers or on-premises deployments. Aside from performance considerations, the underlying cloud or bare-metal infrastructure doesn't matter; as long as the Antidote platform is deployed on a Kubernetes cluster, that's all that matters. The `antidote-ops <https://github.com/nre-learning/antidote-ops>`\_ repository contains the Terraform and Ansible scripts we use to run Antidote in GCP to power NRE Labs.
-
-
+There is only one real requirement at this layer, which is Kubernetes. Kubernetes was selected as a common substrate for the Antidote platform for better portability between cloud providers or on-premises deployments. Aside from performance considerations, the underlying cloud or bare-metal infrastructure doesn't matter; as long as the Antidote platform is deployed on a Kubernetes cluster, that's all that matters. We recommend running Kubernetes on a bare-metal cluster \(while not strictly required\), and it must support CNI.
 
 > Why not Hosted Kubernetes? There are two main constraints we need to solve before moving into something like GKE:
 >
@@ -35,7 +31,7 @@ In the following figure, the platform runs the same example lesson for 2 learner
 
 ![](../../.gitbook/assets/lessons_hla.png)
 
-Lesson Networking
+## Lesson Networking
 
 Kubernetes provides a lot of great primitives for managing the individual resources that make up a lesson programmatically, but with one major caveat - the networking model is not very conducive to running network devices. The popular use case for Kubernetes is to deploy simple applications within containers that have a single network interface, `eth0`.
 

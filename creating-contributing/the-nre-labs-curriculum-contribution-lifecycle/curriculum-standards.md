@@ -27,13 +27,13 @@ Quality is important in NRE Labs. Here are some general things to be on the look
 * Does each lesson stage hit the target length of 5-10 minutes?
 * Are the lesson guides easy to follow? Are they well-written,
 
-  with appropriate chunking, puncuation/grammar, and visuals?
+  with appropriate chunking, punctuation/grammar, and visuals?
 
 ### Technical
 
 It's also very important that the curriculum takes maximum advantage of the underlying Antidote platform.
 
-* Does this follow the :ref:`Lesson Image Requirements <lessonimages>`?
+* Does this follow the [Lesson Image Requirements](../../antidote/object-reference/images.md)?
 * Does the lesson appropriately take advantage of Antidote's optional features for content depth, like
 
   optional objective verification or diverse presentations? How about lesson diagrams or videos?

@@ -1,15 +1,10 @@
 # NRE Labs Public Test Realm \(PTR\)
 
-To allow the community to see the latest changes in the curriculum, and help with testing them to ensure they're solid before going into production, a `"public test realm" (PTR) <https://ptr.labs.networkreliability.engineering>`\_ is maintained separately from the production site. It can be thought of as a daily-updated release candidate for the NRE Labs curriculum.
+> **NOTE** - the PTR is currently offline. We recently re-launched NRE Labs at a new domain, and haven't yet rebuilt the PTR environment. Please bear with us as we figure out a good path forward.
 
-.. NOTE::
+To allow the community to see the latest changes in the curriculum, and help with testing them to ensure they're solid before going into production, a ["public test realm" \(PTR\)](https://ptr.go.nrelabs.io) is maintained separately from the production site. It can be thought of as a daily-updated release candidate for the NRE Labs curriculum.
 
-```text
-PTR is **not** meant to be used to test Antidote platform features. Both the production and PTR
-sites will be running the latest stable release of the Antidote platform for which a stable
-version of the curriculum has been released. The idea of PTR is to provide a sort of rolling release
-candidate for the curriculum itself.
-```
+> PTR is **not** meant to be used to test Antidote platform features. Both the production and PTR sites will be running the latest stable release of the Antidote platform for which a stable version of the curriculum has been released. The idea of PTR is to provide a sort of rolling release candidate for the curriculum itself.
 
 The PTR is redeployed nightly from the latest `master` of the NRE Labs curriculum. This means that content that's gone through the proper approval process should show up automatically within 24 hours.
 
@@ -17,7 +12,7 @@ As a result, PTR is inherently not guaranteed to be stable, and content in PTR s
 
 The flow of content from contribution to PTR is outlined below:
 
-.. image:: /images/ptr\_process.png
+![](../../.gitbook/assets/ptr_process.png)
 
 As outlined in the previous sections, the curriculum is built to target a particular stable version of the Antidote platform. Since the PTR is primarily used as a function of the curriculum, when a new curriculum release cycle kicks off, and a platform version is identified, this version will be deployed to the PTR.
 

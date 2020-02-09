@@ -1,6 +1,6 @@
 # Curriculum Release Process
 
-The NRE Labs curriculum is managed like any software project, with regular, planned release cycles. The lifecycle of a curriculum release of the is performed in four discrete steps.
+The NRE Labs curriculum is managed like any software project, with regular, planned release cycles. The lifecycle of a curriculum release is performed in four discrete steps.
 
 ### Step 1 - Release Kickoff
 
@@ -57,7 +57,7 @@ In the following week \(or at most two\), the cycle will repeat, and a new relea
 
 The NRE Labs curriculum is released separately from the underyling Antidote platform. As a result, the platform's release cycle will charge ahead with new features, and it's up to the curriculum release planning to "target" a stable version of the platform to develop against. The below image shows an **example** of how this might work:
 
-.. image:: /images/curriculum\_target.png
+![](../.gitbook/assets/curriculum_target.png)
 
 At the time the curriculum started on its own release cycle, `v0.4.0` of the platform was released simultaneously with `v1.0.0` of the NRE Labs curriculum. In the future, the curriculum may want to release a new version before `v0.5.0` of the platform is ready. In this case, the curriculum, starting with `v1.1.0` will continue to target `v0.4.0` until a suitable stable platform release is ready.
 

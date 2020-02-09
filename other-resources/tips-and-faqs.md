@@ -1,14 +1,10 @@
 # Tips and FAQs
 
-How can I stand up a development environment to test my curriculum contributions?
+## How can I test my curriculum contributions locally?
 
-```text
-The :ref:`selfmedicate <selfmedicate>` documentation is exactly what you need. This
-environment allows you to spin up a local instance of Antidote on your own machine, and map your
-curriculum into it so you can see your changes live without having to open a pull request right away.
+The :ref:`selfmedicate <selfmedicate>` documentation is exactly what you need. This environment allows you to spin up a local instance of Antidote on your own machine, and map your curriculum into it so you can see your changes live without having to open a pull request right away.
 
-How are you running network devices in this thing?
-```
+## How are you running network devices in this thing?
 
 Everything in Antidote is executed in Kubernetes, so everything has to be a container. On the surface, this may seem like a barrier to being able to run virtual networking images, which are commonly available as virtual machines. Indeed, a common misconception is that the two models are mutually exclusive, but they're not.
 
@@ -16,36 +12,17 @@ At the end of the day, a container is just a highly configured process, and QEMU
 
 See :ref:`architecture <architecture>` for more details on this and other aspects of images within Antidote.
 
-Do you only support Junos?
+## Do you only support Junos?
 
-```text
-This is a common question we get because the only image currently in use in the NRE Labs curriculum
-is the vQFX image, and of course Juniper is paying the cloud bills for the NRE Labs site, so this question
-is a fair one.
+Definitely not. In fact, the underlying Antidote platform doesn't care at all what operating system a lesson endpoint uses, only that it's accessible via the ports described in a [Presentation](../antidote/object-reference/lessons/presentations.md).
 
-Bottom line is, there's no architectural restriction against running other images. In fact, the platform was
-built from day one to be multivendor, and not just in the fact we can run the image, but also in how it's
-incorporated into the true value of the platform, such as autoconfiguration between labs.
+[As of v1.1.0](https://github.com/nre-learning/nrelabs-curriculum/releases/tag/v1.1.0), the NRE Labs curriculum includes and makes use of a Cumulus VX image as well, and we have plans to add even more in the near future. Any other networking vendor that is interested in donating a virtual image for their kit and is willing to abide by the project's [governance document](https://github.com/nre-learning/proposals/blob/master/governance.md) and the [code of conduct](https://github.com/nre-learning/proposals/blob/master/codeofconduct.md) is welcome to participate in the project.
 
-The technical requirement is that the network device is accessible via SSH for terminal access with the
-appropriate credentials and packaged within a docker container. We're already using very flexible tools for doing
-inter-stage configuration, so we're ready to use other vendor kit from the get-go; it's just a matter
-of getting vendors to contribute their image. Juniper has done this as an early example, but any other
-vendor that is willing to abide by the Code of Practice (coming soon) is welcome to
-participate in the project.
-
-In short, we've put the right technical pieces in place to make it possible, now we're working on getting
-other vendors to contribute images to be used in the platform.
-
-How do I get my "stuff" into a lesson?
-~~~~~~~~~~~~
-```
+## How do I get my "stuff" into a lesson?
 
 It's quite rare to have a lesson in mind that doesn't also include some kind of custom "thing". This could be a simple script you wrote or downloaded and wish to show it in your lesson, configuration or data files used by an application, or full-blown software you'd like to be installed and running or available within the environment. At the end of the day, your goal is to get this "stuff" into your lesson definition.
 
-In the **vast majority of cases**, the best way to do this is simply to store those files in the curriculum repo within your lesson directory. In
+In the **vast majority of cases**, the best way to do this is simply to store those files in your lesson's directory tree. When your lesson is launched, this lesson directory is mapped via volume to every container that runs in a lesson \(at `/antidote`\) so just by having those files in that directory, you'll have access to them at runtime.
 
-it's a matter of just putting it in your lesson directory. The entire curriculum is mapped via volume to every container that runs in a lesson, so just by having those files in that directory, you'll have access to them at runtime.
-
-You can also create a docker image that follows the :ref:`image <lessonimages>` guidelines if you want a more complicated software installation to be present.
+You can also create an [Endpoint Image](../antidote/object-reference/images.md) if you're looking for a more complicated software installation to be available in your lesson.
 

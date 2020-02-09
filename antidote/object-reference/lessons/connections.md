@@ -1,41 +1,38 @@
-# Connecting Endpoints
+# Connections
 
-.. \_toolbox-connections:
+Another cool thing about Antidote is that it allows lesson creators to build complex topologies of Endpoints through some simple back-end networking orchestrated by [Syringe](../../antidote-architecture/syringe.md) and made possible by Kubernetes and a special networking plugin.
 
-## Connections
-
-Another cool thing about Antidote is that it allows lesson creators to build complex topologies of Endpoints through some simple back-end networking orchestrated by :ref:`Syringe <syringe>` and made possible by Kubernetes and a special networking plugin.
-
-We explain **how** this all works over in the :ref:`Architecture docs <architecture>`. The way you use this functionality in a lesson is fairly simple. The first thing you should know is that all Endpoints are connected to the same "management" network. The `eth0` interface of every container is connected here, and each can communicate with each other by default.
+We explain **how** this all works over in the [Architecture docs](../../antidote-architecture/). The way you use this functionality in a lesson is fairly simple. The first thing you should know is that all Endpoints are connected to the same "management" network. The `eth0` interface of every container is connected here, and each can communicate with each other by default.
 
 The example below shows three Endpoints in a lesson definition:
 
-.. CODE:: yaml
-
-endpoints:
-
-* name: vqfx1 image: antidotelabs/vqfx:snap1 configurationType: napalm-junos presentations:
-  * name: cli
-
+```text
+- name: vqfx1
+  image: antidotelabs/vqfx-snap1
+  configurationType: napalm-junos
+  presentations:
+  - name: cli
     port: 22
-
-    type: ssh
-* name: vqfx2 image: antidotelabs/vqfx:snap2 configurationType: napalm-junos presentations:
-  * name: cli
-
-    port: 22
-
-    type: ssh
-* name: vqfx3 image: antidotelabs/vqfx:snap3 configurationType: napalm-junos presentations:
-  * name: cli
-
-    port: 22
-
     type: ssh
 
-You can thing of these like nodes in a graph topology, as all networks are. So, if Endpoints are nodes, then the edges, or the connections between these nodes, are `connections`:
+- name: vqfx2
+  image: antidotelabs/vqfx-snap2
+  configurationType: napalm-junos
+  presentations:
+  - name: cli
+    port: 22
+    type: ssh
 
-.. CODE:: yaml
+- name: vqfx3
+  image: antidotelabs/vqfx-snap3
+  configurationType: napalm-junos
+  presentations:
+  - name: cli
+    port: 22
+    type: ssh
+```
+
+You can think of these like nodes in a graph topology, as all networks are. So, if Endpoints are nodes, then the edges, or the connections between these nodes, are `connections`:
 
 ```text
 connections:
@@ -47,11 +44,9 @@ connections:
   b: vqfx1
 ```
 
-This is a simple list of connections from `a` to `b`. The first connection is from `vqfx1` to `vqfx2` and so on. The back-end orchestrator will create virtual networks for each Connection, and then attach Endpoints to them.
+This is a simple list of connections from `a` to `b`. The first connection is from `vqfx1` to `vqfx2` and so on. Syringe will create virtual networks for each Connection, and then attach Endpoints to them.
 
 You can see the attachment to these networks by describing any Kubernetes pod using the `kubectl` CLI that represents an Endpoint:
-
-.. CODE::
 
 ```text
 kubectl -n=12-abcdefghijkl-ns describe pod vqfx1

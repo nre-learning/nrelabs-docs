@@ -1,6 +1,6 @@
 # Syringe
 
-Syringe is where the real work gets done in the Antidote project. It's responsible for taking in lesson definitions via :ref:[a YAML file](../object-reference/lessons/) and any configs, scripts, etc used in the lesson, and providing them to the front-end via its API.
+Syringe is where the real work gets done in the Antidote project. It's responsible for taking in lesson definitions via [a YAML file](../object-reference/lessons/) and any configs, scripts, etc used in the lesson, and providing them to the front-end via its API.
 
 ## Configuring Syringe
 
@@ -20,7 +20,7 @@ containers:
 (...truncated...)
 ```
 
-If you're using `antidote-selfmedicate <https://github.com/nre-learning/antidote-selfmedicate>` _to spin up an instance of Antidote and Syringe yourself, note that these are provided in the included `Kubernetes manifest <https://github.com/nre-learning/antidote-selfmedicate/blob/master/syringe.yml>`_.
+If you're using `antidote-selfmedicate <https://github.com/nre-learning/antidote-selfmedicate>` __to spin up an instance of Antidote and Syringe yourself, note that these are provided in the included [Kubernetes manifest](https://github.com/nre-learning/antidote-selfmedicate/blob/master/manifests/syringe-k8s.yaml).
 
 See the tables below for a description of each, as well as information on which are required, and which have default values.
 
@@ -46,17 +46,17 @@ See the tables below for a description of each, as well as information on which 
 
 ## The Syringe Client - `syrctl`
 
-While Syringe itself is primarily thought of as the orchestrator that sits behind the scenes within Antidote, that's not all it can do. For each release of Syringe, a totally separate binary is compiled, called `syrctl`. This is the command-line cline for Syringe, and while a popular use case for this is to control the back-end Syringe component\(s\), there are plenty of things that `syrctl` can do all on its own.
+While Syringe itself is primarily thought of as the orchestrator that sits behind the scenes within Antidote, that's not all it can do. For each release of Syringe, a totally separate binary is compiled, called `syrctl`. This is the command-line client for Syringe, and while a popular use case for this is to control the back-end Syringe component\(s\), there are plenty of things that `syrctl` can do all on its own.
 
 
 
 ### Download `syrctl` 
 
-For every release of the Antidote platform, a corresponding release is created for Syringe. You can `always find the latest release here <https://github.com/nre-learning/syringe/releases/latest>`\_, where precompiled binaries of Syringe have been posted. Download the file appropriate for your system, and extract the binaries into a directory on your `$PATH` \(or extract them anywhere and run via relative path\). Either is fine.
+For every release of the Antidote platform, a corresponding release is created for Syringe. You can [always find the latest release here](https://github.com/nre-learning/syringe/releases/latest), where pre-compiled binaries of Syringe have been posted. Download the file appropriate for your system, and extract the binaries into a directory on your `$PATH` \(or extract them anywhere and run via relative path\). Either is fine.
 
 ### Validating Lesson Content
 
-One of the things `syrctl` can do for us is validate lesson content to make sure it has all of the basics to work properly. This is done via the subcommand `syrctl validate`. This command is directed at a curriculum directory in order to work: for instance, we have the NRE Labs curriculum installed locally:
+One of the things `syrctl` can do for us is validate lesson content to make sure it has all of the basics to work properly. This is done via the sub-command `syrctl validate`. This command is directed at a curriculum directory in order to work: for instance, we have the NRE Labs curriculum installed locally:
 
 ```text
 ~$ ls -lha
@@ -79,8 +79,6 @@ drwxr-xr-x  5 mierdin mierdin 4.0K Apr 21 22:52 lessons
 ```
 
 We're already `cd`'d into this directory, so we just need to run `syrctl validate .` to instruct syrctl to validate the local directory:
-
-.. code::
 
 ```text
 ~$ syrctl validate .
@@ -111,7 +109,7 @@ All detected lesson files imported successfully.
 
 This runs the exact same logic that `syringed` would use to load lessons on the server-side, so this is a really handy way to make sure the basics of curriculum definitions are done correctly.
 
-On the `NRE Labs Curriculum repository <https://github.com/nre-learning/nrelabs-curriculum>`\_, we're actually running `syrctl validate` on every new Pull Request to ensure things are set up properly, as much as possible.
+On the [NRE Labs Curriculum repository](https://github.com/nre-learning/nrelabs-curriculum), we're actually running `syrctl validate` on every new Pull Request to ensure things are set up properly, as much as possible.
 
 There are things it won't check - like the validity of a network configuration, or that your Docker image is built properly, but in terms of the things that Syringe requires, it will give you confidence in a stable starting point, rather than reading through a list of points in this doc.
 

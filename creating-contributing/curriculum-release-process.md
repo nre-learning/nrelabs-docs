@@ -15,7 +15,7 @@ In this first kickoff, we'll begin gathering ideas for things we want to get don
 
 While the kickoff is meant to get a starter list together, it's likely that more ideas will come up at any time in the release cycle. This is normal, and expected. However, the first week of a release cycle should strive to ensure the really important things are well-documented and if possible, assigned.
 
-Another very important task for this initial meeting is to decide which Antidote platform this curriculum release will [target](curriculum-release-process.md#appendix-platform-targeting). If a new version is desired, [PTR](the-nre-labs-curriculum-contribution-lifecycle/nre-labs-public-test-realm-ptr.md) will be immediately updated to that stable release at the beginning of the curriculum development cycle. Similarly, the [selfmedicate](previewing-locally.md) should also be updated with this version, and curriculum developers should re-pull on this repository to get the latest manifests.
+Another very important task for this initial meeting is to decide which Antidote platform this curriculum release will [target](curriculum-release-process.md#appendix-platform-targeting). If a new version is desired, [PTR](contributing-content/nre-labs-public-test-realm-ptr.md) will be immediately updated to that stable release at the beginning of the curriculum development cycle. Similarly, the [selfmedicate](previewing-locally.md) should also be updated with this version, and curriculum developers should re-pull on this repository to get the latest manifests.
 
 A project plan for the release that represents the work discussed in the previous week will be posted to the [curriculum repo's projects list](https://github.com/nre-learning/nrelabs-curriculum/projects) and presented to attendees. This is a kanban-board style project planning tool that allows all to easily see the state of work for a given release.
 
@@ -27,7 +27,7 @@ Finally, a post will be created in the [Curriculum Project Management](https://d
 
 Once a release cycle is kicked off, the only thing left to do is....do the work! At this point, a relatively complete list of things to do for this release should be captured in a Github project, which will be linked to in the community forum kickoff post. Contributors can use this as a guide, or do other work they think is useful.
 
-The [curriculum contribution guide](the-nre-labs-curriculum-contribution-lifecycle/) should be consulted repeatedly to ensure you're on the right track with respect to curriculum contributions. All of those guidelines apply here. It's important for contributions to follow this lifecycle, so that release managers can properly coordinate work across the project.
+The [curriculum contribution guide](contributing-content/) should be consulted repeatedly to ensure you're on the right track with respect to curriculum contributions. All of those guidelines apply here. It's important for contributions to follow this lifecycle, so that release managers can properly coordinate work across the project.
 
 The [selfmedicate development environment](previewing-locally.md) should also be used to locally preview curriculum content that is being developed.
 
@@ -41,7 +41,7 @@ A forum topic will be posted to [Curriculum Project Management](https://discuss.
 
 The best way to provide feedback is via a response to that original forum topic, or a Github issue in the curriculum repository.
 
-> Instead of submitting feedback, you may feel like you can just fix it yourself in a Pull Request. This is always welcome and appreciated, and is often the easiest way to make your first contribution to the curriculum. So, don't be shy! See the [curriculum contribution guide](the-nre-labs-curriculum-contribution-lifecycle/) for more info on how to do this.
+> Instead of submitting feedback, you may feel like you can just fix it yourself in a Pull Request. This is always welcome and appreciated, and is often the easiest way to make your first contribution to the curriculum. So, don't be shy! See the [curriculum contribution guide](contributing-content/) for more info on how to do this.
 
 The curriculum maintainers will stay on top of feedback and strive to ensure that all problems are either fixed via a Pull Request, or documented via an Issue for a future release. The Testing Phase will not end until the maintainers are comfortable that the latest `master`, as represented via the PTR site represents a healthy curriculum.
 

@@ -27,26 +27,19 @@ cd antidote-selfmedicate/
 **Please remember** that changes are being made to selfmedicate all the time. If you encounter issues, the very first thing you should try before you open an issue is to make sure you have the latest copy of this repository by doing a `git pull` on the master branch.
 {% endhint %}
 
-For maximum compatibility across operating systems, we deploy selfmedicate in a Vagrant environment, so that it can run in a consistent, properly configured virtual machine with all of the dependencies needed.
-
-{% hint style="info" %}
-Running Self-Medicate within this Vagrant environment is the only supported option today. Linux users may wish to run the Self-Medicate script directly, to bypass the first layer of virtualization.
-
-You're welcome to go this route, of course, but you'll be on your own. You'll also want to make sure Docker, `kubectl` and minikube are all installed.
-{% endhint %}
-
-These instructions will spin up a virtual machine, so first, you'll need a hypervisor. We support [Virtualbox](https://www.virtualbox.org/wiki/Downloads) as it is widely supported across operating systems as well as the automation we'll use to get everything spun up on top of it.
+For maximum compatibility across operating systems, we deploy selfmedicate in a Vagrant environment, so that it can run in a consistent, properly configured virtual machine with all of the dependencies needed. As a result, you'll need a hypervisor. Selfmedicate officially supports [Virtualbox](https://www.virtualbox.org/wiki/Downloads) as it is widely supported across operating systems as well as the automation we'll use to get everything spun up on top of it.
 
 Next, you'll need [Vagrant](https://www.vagrantup.com/docs/installation/). Vagrant allows us to define a virtual environment in the selfmedicate repository that automatically contains all of the software dependencies needed to make Antidote work.
 
 {% hint style="info" %}
-The Self-Medicate `Vagrantfile` starts a VM with 8GB of RAM and 2 vCPUs by default. While this is not a strict requirement, it's a reasonable default. You're free to edit this if you know what you're doing.
+The Self-Medicate `Vagrantfile` starts a VM with 4GB of RAM and 2 vCPUs by default. While this is not a strict requirement, it's a reasonable default. You're free to edit this if you know what you're doing.
 {% endhint %}
 
-Vagrant's [`vagrant-vbguest`](https://github.com/dotless-de/vagrant-vbguest) __should also be installed. You only need to run this once.
+There are some required Vagrant plugins as well \(you only need to run these once\).
 
 ```text
 vagrant plugin install vagrant-vbguest
+vagrant plugin install vagrant-hostsupdater
 ```
 
 To start the Vagrant environment for selfmedicate, run:
@@ -55,15 +48,15 @@ To start the Vagrant environment for selfmedicate, run:
 vagrant up
 ```
 
-{% hint style="info" %}
-Selfmedicate is designed to do as much work as possible up-front, so that your development experience can be as positive as possible, and this includes downloading a bunch of large-ish image files. As a result, the first time you run this command can take some time. BE PATIENT. 
-{% endhint %}
+Once this is done, the environment should be ready to access at the URL shown by the script. 
 
-Once this is done, the environment should be ready to access at the URL shown by the script.
+## The Selfmedicate Script
 
-If you need to pause your work, you can use the `vagrant suspend` command to suspend the Vagrant machine. Use `vagrant resume` when you're ready to resume.
+In the last section, we started a Vagrant machine with all of the prerequisites installed for running the Antidote platform. In this section, we'll dive a little bit into the selfmedicate tool specifically, so you are able to use it to iterate on lesson content and quickly preview the changes you've made.
 
-Finally, to interact with selfmedicate, you'll need to open an SSH connection to the Vagrant machine:
+These instructions assume you've followed the previous section, and now have a running Vagrant machine. If not, please do that now before continuing.
+
+Open an SSH connection to the Vagrant machine:
 
 ```text
 vagrant ssh
@@ -71,13 +64,7 @@ vagrant ssh
 
 The rest of the selfmedicate instructions will take place within this environment.
 
-## The Selfmedicate Script
-
-In the last section, we started a Vagrant machine with all of the prerequisites installed for running the Antidote platform. In this section, we'll dive a little bit into the selfmedicate tool specifically, so you are able to use it to iterate on lesson content and quickly preview the changes you've made.
-
-These instructions assume you've followed the previous section, and now have a running Vagrant machine, with an active SSH connection by running `vagrant ssh`. If not, please do that now before continuing.
-
-Within the selfmedicate repo, the `selfmedicate.sh` script is our one-stop shop for managing the development environment. This script has several subcommands:
+The `selfmedicate.sh` script is our one-stop shop for managing the development environment. This script has several subcommands:
 
 ```text
 ./selfmedicate.sh -h
@@ -94,7 +81,11 @@ options:
 
 In **rare** circumstances, you might need to run the `start`, `stop`, or `resume` commands. However, these commands have been wired up to the Vagrant environment in such a way that this shouldn't be necessary.
 
-The main command you'll probably want to run within the Vagrant environment is the `reload` subcommand. This allows Antidote to re-import curriculum content.
+The main command you'll probably want to run within the Vagrant environment is the `reload` subcommand. This allows Antidote to re-import curriculum content:
+
+```text
+./selfmedicate reload
+```
 
 ### Troubleshooting Self-Medicate
 

@@ -97,7 +97,7 @@ collection: 1
 
 This section contains metadata about this lesson. This isn't directly concerned with the actual content you're trying to convey through a lesson, but it's very valuable for helping users find the content, and use it within their learning journey. Below is a table which describes each field:
 
-> Some of these fields are required, some aren't. Some have a length requirement, and others don't. For guidance here, you should definitely get up to speed with the [`syrctl`](../../antidote-architecture/syringe.md#the-syringe-client-syrctl) tool. That tool has a validation function you can run on a curriculum, and it will let you know if anything needs fixed.
+> Some of these fields are required, some aren't. Some have a length requirement, and others don't. For guidance here, you should definitely get up to speed with the [`syrctl`]() tool. That tool has a validation function you can run on a curriculum, and it will let you know if anything needs fixed.
 
 * `lessonName` The human-readable name for a lesson. Kind of like a blog post title.
 * `lessonId` A unique ID for this lesson. You can assign this yourself, as long as it's unique in this curriculum.

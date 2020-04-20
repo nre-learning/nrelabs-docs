@@ -14,7 +14,7 @@ Every endpoint that's instantiated in a lesson has that lesson's directory mappe
 
 The `utility` image, for example, comes preloaded with Python and a bash shell, so can satisfy a lot of use cases here. You simply reference this image when defining an endpoint in your lesson definition, and any files you place in the lesson directory will be made available at runtime to the configured directory. In NRE Labs, this is the `/antidote` directory.
 
-> This location is controlled by Syringe and configured using the `SYRINGE_LESSON_REPO_DIR` environment variable. See [Syringe configuration](../antidote-architecture/syringe.md#configuring-syringe) for more details.
+> This location is controlled by Syringe and configured using the `SYRINGE_LESSON_REPO_DIR` environment variable. See [Syringe configuration]() for more details.
 
 There are some "common" images you might consider using before building your own:
 

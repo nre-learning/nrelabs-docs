@@ -5,19 +5,19 @@
 ## Creating and Contributing <a id="creating-contributing"></a>
 
 * [First Steps](creating-contributing/getting-started.md)
-* [Previewing Locally](creating-contributing/previewing-locally.md)
-* [Contributing Your Content](creating-contributing/contributing-content/README.md)
-  * [Curriculum Standards](creating-contributing/contributing-content/curriculum-standards.md)
-  * [NRE Labs Public Test Realm \(PTR\)](creating-contributing/contributing-content/nre-labs-public-test-realm-ptr.md)
-* [Curriculum Release Process](creating-contributing/curriculum-release-process.md)
+* [Open a Pull Request](creating-contributing/contributing-content.md)
+* [Preview Your Changes](creating-contributing/preview-your-changes.md)
+* [Review and Merge](creating-contributing/review-and-merge.md)
 
 ## Other Resources
 
+* [Curriculum Release Process](other-resources/curriculum-release-process.md)
 * [Creating Endpoint Images](other-resources/creating-endpoint-images.md)
 * [NRE Labs Git Repositories](other-resources/nre-labs-git-repositories.md)
 * [Help! I'm Not A Developer!](other-resources/help-im-not-a-developer.md)
-* [Tips and FAQs](other-resources/tips-and-faqs.md)
 * [The Learner's Guide to Jupyter Notebooks](other-resources/the-learners-guide-to-jupyter-notebooks.md)
+* [\(Legacy\) Local Preview](other-resources/previewing-locally.md)
+* [Tips and FAQs](other-resources/tips-and-faqs.md)
 
 ## Antidote
 

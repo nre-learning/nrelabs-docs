@@ -42,7 +42,7 @@ A forum topic will be posted to [Platform Project Management](https://community.
 
 Once the testing phase has completed, the NRE Labs Ops team will execute a workflow that creates a release for all relevant platform projects. This will create docker images for everything with appropriate tags, as well as provide compiled binaries for Syringe.
 
-After the release is finished, it's entirely up to those in charge of the [NRE Labs curriculum release process](../../creating-contributing/curriculum-release-process.md) when or if this platform release is used in production for the NRE Labs site.
+After the release is finished, it's entirely up to those in charge of the [NRE Labs curriculum release process](../../other-resources/curriculum-release-process.md) when or if this platform release is used in production for the NRE Labs site.
 
 In the following week \(or at most two\), the cycle will repeat, and a new release kickoff will take place.
 

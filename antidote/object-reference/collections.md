@@ -41,5 +41,5 @@ tier: prod
 
 This collection definition is just an example. You should look at the [existing collection definitions](https://github.com/nre-learning/nrelabs-curriculum/tree/master/collections) for inspiration. Note also that not every field picture above is required. Some are optional. Using the`syrctl validate` command will be useful for identifying which fields you need to provide no matter what.
 
-As with lesson definitions, follow the [NRE Labs curriculum contribution guide](../../creating-contributing/contributing-content/) in order to get your collection added to the NRE Labs curriculum.
+As with lesson definitions, follow the [NRE Labs curriculum contribution guide](../../creating-contributing/contributing-content.md) in order to get your collection added to the NRE Labs curriculum.
 

@@ -18,7 +18,7 @@ If you're building a lesson, it's important that you include an outline of what 
 
 ## Bootstrap Your Content
 
-Once you have a plan in place and have communicated it to the community, it's time to create your lesson.
+Once you have a plan in place and have communicated it to the community, it's time to create your content.
 
 First, [fork the NRE Labs curriculum GitHub repository](https://github.com/nre-learning/nrelabs-curriculum/fork). This allows you to create a copy of the curriculum at a location of your choosing \(usually underneath your own Github username\) that you have permissions to push to. In a future step, when you're ready to contribute your changes, we'll open a Pull Request to bring your changes back into the upstream curriculum repo.
 
@@ -40,9 +40,11 @@ cd nrelabs-curriculum/
 {% endtab %}
 {% endtabs %}
 
-And this is where we arrive at a bit of a weak spot in our current tooling. In an upcoming effort to re-vamp the Antidote platform, we're hoping to introduce new command-line tools for creating new content. The idea is that you could run a command like `antidote lesson new` and it will run you through an interactive wizard to create new content as easily as possible.
+Next, you'll need the [Antidote CLI](../antidote/the-antidote-cli/). This is the command-line tool for bootstrapping new content for NRE Labs like lessons. Install this tool using the instructions provided, and then [follow the instructions here](../antidote/the-antidote-cli/create-curriculum-resources.md) to bootstrap a new curriculum resource such as a lesson. These interactive wizards will create a skeleton copy of a new resource within your existing curriculum directory, which you can then use as a starting point.
 
-Unfortunately, until this is done, the best thing to do is look for an existing lesson, copy it, and tweak it to meet your needs. So for now, look for examples in the `lessons/` sub-directory of the curriculum that are similar to the idea for a lesson you have in mind, create a copy of that entire lesson directory \(using `cp -r <existing lesson directory> <new lesson directory>`\) and then make edits to the new copy. The [Antidote documentation](https://antidoteproject.readthedocs.io/en/latest/platform/curricula/lessons/index.html) will help with understanding the various files and fields you'll need to know about.
+> Note that this tooling isn't designed to build a finished lesson, only a starting point. There's still a lot left to do at the end of these wizards, so pay close attention to the documentation as well as the output at the end of the wizard.
 
-> We're aware this makes for a fairly poor experience, and we're actively working to improve the Antidote tooling to make this a lot easier. In the meantime, the existing [`syrctl validate`](https://antidoteproject.readthedocs.io/en/latest/platform/architecture/syringe/syrctl.html)  command **does** allow you to at least check to ensure the copied content you've created meets the basic standards. Please stay tuned to the [Antidote Mini-Project 1 \(MP1\)](https://community.networkreliability.engineering/c/antidote-platform-project-management/mp1-syringe-redesign) for updates on new tooling to make lesson content easier to bootstrap.
+Once finished with the initial bootstrap, you'll also want to [validate your local curriculum](../antidote/the-antidote-cli/validating-an-existing-curriculum.md). This validation step can identify any problems with what you've built, and is a necessary next step after the initial bootstrap. Contributions to the curriculum must pass this validation step before being merged, so it's worth it to run this locally yourself first.
+
+
 

@@ -1,5 +1,9 @@
 # Creating Endpoint Images
 
+Images should be handled separately from lessons.
+
+
+
 In general, new curriculum content like lessons should take advantage of the Endpoint images that already exist. Images are not meant to be used once, for one lesson - they are meant to be standalone resources that could be used in multiple lessons as the need arises.
 
 However sometimes the creation of new images is warranted, and this doc describes the process for doing this.

@@ -10,3 +10,10 @@ Once all status checks for a given Pull Request pass, the NRE Labs Preview Servi
 
 Note that previews are not generated if the branch doesn't pass the other CI checks, so if you're not seeing this, ensure that you aren't seeing any errors from Travis CI.
 
+## Known Issues
+
+This is a new service, and while the goal for this service is to make things **way easier** for contributors, it is a new service, so your patience and feedback is greatly appreciated. There are a few issues we are currently aware of:
+
+* Due to the way our cluster certificates have been provisioned, HTTP presentations don't show up in previews properly
+* We don't currently capture logs for configuration changes, only high-level Antidote setup. This catches basic validation errors on startup, but doesn't catch problems with inter-stage configuration scripts. In the meantime, if you are encountering configuration problems in a previewed lesson and don't know why, a maintainer may be able to help, so comment in your PR.
+

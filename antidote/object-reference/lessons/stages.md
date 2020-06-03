@@ -56,7 +56,15 @@ Each Stage has a particular directory structure that you should be aware of. As 
 
 ### Lab Guides
 
-All NRE Labs lessons come with lab guides. These are meant to be instructions the learner can follow along with so they're not spinning your wheels, wondering what to do with a lesson. It is also meant to include snippets of code or commands for them to execute, or have executed for them. There are two options for lesson guides in Antidote today:
+All NRE Labs lessons come with lab guides. These are meant to be instructions the learner can follow along with so they're not spinning your wheels, wondering what to do with a lesson. It is also meant to include snippets of code or commands for them to execute, or have executed for them.
+
+**TODO** - State in the lesson guide docs to not put any top-level headers, we'll do that for you. Just start right into your first paragraph.
+
+
+
+
+
+There are two options for lesson guides in Antidote today:
 
 * `Markdown <Writing Lab Guides with Markdown>`
 * `Jupyter Notebooks <Writing Lab Guides with Jupyter Notebooks>`

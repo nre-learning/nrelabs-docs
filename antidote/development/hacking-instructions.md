@@ -13,31 +13,35 @@ These are separate mostly because they use very different technologies, and ther
 
 This is a part of the project undergoing some severe changes currently, and if you're interested in getting involved, it's best to reach out on our community forums, and someone will help you out. Stay tuned for more detailed development info to be posted here.
 
-### Hacking on Syringe
+### Hacking on Antidote-Core
 
-[Syringe](https://github.com/nre-learning/syringe) is an application written in Go which provides orchestration for lesson resources on Kubernetes, while providing an API for the web front-end to consume.
+TBD - while antidoted normally relies on kubernetes to operate, you can disable the scheduling service via config if you want to do some API testing.
 
-To build Syringe, you'll need to install the version of Go specified in [Syringe's Dockerfile](https://github.com/nre-learning/syringe/blob/master/Dockerfile#L1). Whatever version of Go is used there, is the currently/officially supported version.
+antidoted needs nats at dev time
 
-Once done, enter the Syringe repository. There are a few things you can do here. To simply compile Syringe binaries, including `syrctl` and all of the server-side binaries, run:
+```text
+docker run --rm -d -p 4222:4222 -p 6222:6222 -p 8222:8222 --name nats-main nats
+```
+
+[Antidote-core](https://github.com/nre-learning/syringe) forms the collection of back-end services that provide orchestration for lesson resources, while providing an API for the web front-end to consume.
+
+To build antidote-core, you'll need to install the version of Go specified in [the Dockerfile](https://github.com/nre-learning/syringe/blob/master/Dockerfile#L1). While other versions of Go **should** work, the version listed there is the currently/officially supported version.
+
+Within the antidote-core repository, compile binaries with:
 
 ```text
 make
 ```
 
-You can also execute Syringe's tests with:
+You can also run tests with:
 
 ```text
 make test
 ```
 
-This is the same command executed by the CI pipeline, so this is a good way to know if your tests will pass before actually pushing anything.
-
-You can also build Syringe's docker container with:
+You can also build the antidote-core docker container with:
 
 ```text
 make docker
 ```
-
-This includes a `docker push` step, so if you want to push this image to your own repository for testing, you'll need to edit the push target, or comment that line out in the Makefile.
 

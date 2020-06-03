@@ -2,25 +2,29 @@
 
 So, you want to contribute to the NRE Labs curriculum! Great, and thank you! Please read on for some helpful hints that will guide you along the process and ensure your time is spent wisely.
 
-> No one should feel like they have to get permission to contribute. There's no harm in you opening an Issue or Pull Request that you feel is valuable and is worthy of your time. This section of the docs is aimed at empowering you to do this on your own and get your contributions merged into the project.
+Before you get started, please read the [NRE Labs Curriculum Standards](https://github.com/nre-learning/nrelabs-curriculum/blob/master/CONTRIBUTING.md). This is **the** document used by all content reviewers to ensure curriculum quality remains high, and all contributions must adhere to these standards.
+
+> **NOTE for Open Source Maintainers -** we would love the opportunity to host tutorials for your project. If you've created or are maintaining an open source project you should have the right of first refusal for contributing a lesson on your project in the NRE Labs curriculum.
 
 ## Communicate Your Idea
 
 The NRE Labs curriculum should be treated like any other open source project. It's built via contributions from all over the world, all the time. So before getting started, you should first spend time communicating your plans with the rest of the community.
 
-First, peruse the [existing GitHub issues](https://github.com/nre-learning/nrelabs-curriculum/issues) to see if anyone is already working on something similar to what you have in mind. Maybe someone else is looking to build a similar lesson, and this gives you the opportunity to combine forces with these existing efforts if they exist. A single lesson that covers all the bases is way better than two similar lessons that have overlap and confuse the learner. If this exists, post to that issue and indicate you'd like to contribute.
+First, peruse the [existing GitHub issues](https://github.com/nre-learning/nrelabs-curriculum/issues) to see if anyone is already working on something similar to what you have in mind. Maybe someone else is looking to build a similar lesson, and this gives you the opportunity to let them know, and combine forces.
 
-If no existing issue exists, you should [open an issue](https://github.com/nre-learning/nrelabs-curriculum/issues/new) for yourself so the community can have a chance to provide feedback on your idea before you spend time building it. This will save you a lot of headache in the future.
+> lf you are looking to collaborate on a lesson, [opening an issue](https://github.com/nre-learning/nrelabs-curriculum/issues/new) is often a good way to see if anyone in the community is interested in helping out.
 
-In this issue, provide as much detail as you can, such as your target audience, and what learners should be expected to get out of this lesson. Remember that this is learning content, so it's not enough to just have a bunch of commands for the learner to run - they should be able to get something tangible from your lesson that they can immediately apply in their day-to-day work.
+## Do You Need New or Changed Images?
 
-If you're building a lesson, it's important that you include an outline of what will be contained within the lesson. Each lesson is built of multiple stages, so you should be able to summarize each in a bullet. Note that each stage should follow some kind of natural progression, and should take no more than 10 minutes for the learner to finish.
+We have a dedicated document for handling [Endpoint Images in NRE Labs](../other-resources/nre-labs-endpoint-images.md), and you should definitely read this first. In the \(ideally rare\) event that you need a new image or a modified image for your lesson, this must be handled **first**, ahead of any lessons that may need them.
 
 ## Bootstrap Your Content
 
+> **IMPORTANT NOTE** - if your lesson will require new software images not already in the curriculum, or edits to an existing image, please read "[NRE Labs Endpoint Images](../other-resources/nre-labs-endpoint-images.md)" first, as this must be handled separately, ahead of any content contributions.
+
 Once you have a plan in place and have communicated it to the community, it's time to create your content.
 
-First, [fork the NRE Labs curriculum GitHub repository](https://github.com/nre-learning/nrelabs-curriculum/fork). This allows you to create a copy of the curriculum at a location of your choosing \(usually underneath your own Github username\) that you have permissions to push to. In a future step, when you're ready to contribute your changes, we'll open a Pull Request to bring your changes back into the upstream curriculum repo.
+First, [fork the NRE Labs curriculum GitHub repository](https://github.com/nre-learning/nrelabs-curriculum/fork). This allows you to create a copy of the curriculum at a location of your choosing \(usually underneath your own GitHub username\) that you have permissions to push to. In a future step, when you're ready to contribute your changes, we'll open a Pull Request to bring your changes back into the upstream curriculum repository.
 
 Once you have your fork, you can clone it to your local filesystem. This is where you'll make all the changes you have planned for your curriculum contribution.
 
@@ -45,6 +49,8 @@ Next, you'll need the [Antidote CLI](../antidote/the-antidote-cli/). This is the
 > Note that this tooling isn't designed to build a finished lesson, only a starting point. There's still a lot left to do at the end of these wizards, so pay close attention to the documentation as well as the output at the end of the wizard.
 
 Once finished with the initial bootstrap, you'll also want to [validate your local curriculum](../antidote/the-antidote-cli/validating-an-existing-curriculum.md). This validation step can identify any problems with what you've built, and is a necessary next step after the initial bootstrap. Contributions to the curriculum must pass this validation step before being merged, so it's worth it to run this locally yourself first.
+
+If you run into problems here, you may consider moving to the next phase, and open a pull request anyways. This way, maintainers will be able to see what you've done thus far, and provide suggestions.
 
 
 

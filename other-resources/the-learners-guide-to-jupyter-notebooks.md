@@ -1,4 +1,6 @@
-# The Learner's Guide to Jupyter Notebooks
+# Jupyter Notebooks
+
+> This guide is meant to help learners understand how to use Jupyter-based lesson guides within a lesson. If you're a content author that wishes to know more about using Jupyter notebooks in your lesson, please see "[Writing Lab Guides with Jupyter Notebooks](../antidote/object-reference/lessons/stages.md#writing-lab-guides-with-jupyter-notebooks)".
 
 If you encounter a jupyter notebook within a lesson, you might be initially overwhelmed with the number of buttons and options. Don't worry about that - you really only need to know a few key things.
 

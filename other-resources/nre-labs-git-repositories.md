@@ -1,4 +1,4 @@
-# NRE Labs Git Repositories
+# Git Tips
 
 The Antidote project does everything in the open. All configurations, curriculum resources, and source code can be found in one of the GitHub repositories in the [`nre-learning`](https://github.com/nre-learning) organization. As a result, no matter where you want to contribute to the Antidote project, you're likely able to do so by contributing to one of these repositories.
 

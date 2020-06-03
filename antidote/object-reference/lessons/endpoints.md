@@ -36,10 +36,7 @@ A few points about the above:
 
   configuration should be done for this endpoint. [See here for more information on endpoint configuration](endpoint-configuration.md).
 
-* The `presentations` field is also optional, and allows you to specify ways that this endpoint should be presented to
-
-  the user. This could be a CLI terminal, or even a web application with it's own tab. [See here for more information on endpoint presentations](presentations.md).
-
+* The `presentations` field is also optional, and allows you to specify ways that this endpoint should be presented to the user. This could be a CLI terminal, or even a web application with it's own tab. [See here for more information on endpoint presentations](presentations.md).
 * The `additionalPorts` field allows you to specify any additional ports that should be opened for this endpoint. By default, only the ports listed in a `presentation` are opened. So, this field allows you to directly specify ports that should be opened regardless of the presentations that are configured.
 
 ## Health Checks

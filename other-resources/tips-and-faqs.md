@@ -1,9 +1,5 @@
 # Tips and FAQs
 
-## How can I test my curriculum contributions locally?
-
-The :ref:`selfmedicate <selfmedicate>` documentation is exactly what you need. This environment allows you to spin up a local instance of Antidote on your own machine, and map your curriculum into it so you can see your changes live without having to open a pull request right away.
-
 ## How are you running network devices in this thing?
 
 Everything in Antidote is executed in Kubernetes, so everything has to be a container. On the surface, this may seem like a barrier to being able to run virtual networking images, which are commonly available as virtual machines. Indeed, a common misconception is that the two models are mutually exclusive, but they're not.

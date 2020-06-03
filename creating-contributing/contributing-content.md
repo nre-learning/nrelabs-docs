@@ -47,6 +47,8 @@ git push origin <your branch>
 
 Once you have commits pushed, you can open a Pull Request, which is a way of saying "I have changes in my fork that I would like you to pull into the main repository". You can do this immediately, or after you feel like you're finished with the work. Opening a Pull Request early, before you're finished with the work, is totally fine, as any subsequent commits pushed to your branch will update the Pull Request. In addition, there are ways to open a Pull Request that lets folks know you're not quite finished with the work - this is totally fine, and in fact encouraged.
 
+> Again, if you haven't read the [NRE Labs Curriculum Standards](https://github.com/nre-learning/nrelabs-curriculum/blob/master/CONTRIBUTING.md), please do so now. If you haven't posted this elsewhere, your Pull Request description **must** provide an outline of intended content. This will make it much easier for maintainers to help you build the best content possible.
+
 If you navigate to the GitHub page for your fork, you'll notice that there's a little bar that says you're X commits ahead of the main repository, with some buttons next to it that let you open a Pull Request:
 
 ![](../.gitbook/assets/branchchanges.png)
@@ -65,7 +67,5 @@ If any of these checks fail, the GitHub status checks will indicate this failure
 
 ![](../.gitbook/assets/screenshot-from-2020-04-20-15-45-57.png)
 
-## Next Steps
-
-Once your Pull Request is open, you can either continue to push changes, or wait for the [Preview service](preview-your-changes.md) to generate a live preview of your changes. You may also indicate via the description or comment that you feel the PR is [ready for review](review-and-merge.md).
+Once your Pull Request is open, you're ready to start using the [Preview Service](preview-your-changes.md) to see a live preview of your changes.
 

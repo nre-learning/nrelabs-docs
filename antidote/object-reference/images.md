@@ -1,72 +1,90 @@
 # Images
 
-Antidote, and all of the lessons that it manages, runs on Kubernetes. As a result, all lesson [endpoints](lessons/endpoints.md), including network devices, are executed from prebuilt Docker images. This means that if you have a particular piece of software you wish to show, you may need to build your own Docker image that's compatible with Antidote. As the default for Antidote \(and is enforced in NRE Labs\) is to disable internet access while a lesson is running, lessons must be self-contained in order to work properly and prebuilt Docker images are key to accomplishing this.
+To understand images within NRE Labs, the first place you should probably look is the set of [existing images in the NRE Labs curriculum](https://github.com/nre-learning/nrelabs-curriculum/tree/master/images). Familiarize yourself with the images that are there, and take a look at what they have in common.
 
-This document aims to help you understand when it's necessary to build your own image, as well as how to do it. It's quite possible that you don't need to concern yourself with a custom Docker image at all. There are a few ways to show content in a lesson that don't involve creating new Docker images on your own.
+Next, you should read the document on [NRE Labs Endpoint Images](../../other-resources/nre-labs-endpoint-images.md) to understand some of the higher-level principles and processes for Images within the NRE Labs curriculum. This document will assume you've read that and have decided to build your own image.
 
-If you're looking to run some commands or scripts, or maybe a new library or simple tool that's not currently supported by the existing curriculum, please consider reading the first section below titled [Use or Extend an Existing Image](images.md#use-or-extend-an-existing-image). If you need to show some totally new software or tool that requires a more formal installation process, continue to [Create a New Image](images.md#create-a-new-image).
+Once finished with this document, you can open a Pull Request to the NRE Labs curriculum to add a new folder to the [images directory,](https://github.com/nre-learning/nrelabs-curriculum/tree/master/images) with all of the files mentioned below.
 
-### Use or Extend an Existing Image
+## Building an Image
 
-Putting your "stuff" \(scripts, configs, etc\) into a Docker image isn't the only way to get it into a lesson. At this point, you probably know that Antidote lessons are defined with simple text files, and those files are stored in a Git repository. What you might not know is that when a lesson is instantiated, the full directory that contained that lesson in the Git repository is made available to each lesson endpoint.
-
-Every endpoint that's instantiated in a lesson has that lesson's directory mapped to it, and all of its contents. If you just want to run a set of bash or Python commands, or you have a script you wish to show, you likely don't need to do anything beyond simply placing those files into the lesson directory, or putting a set of commands into a lesson guide.
-
-The `utility` image, for example, comes preloaded with Python and a bash shell, so can satisfy a lot of use cases here. You simply reference this image when defining an endpoint in your lesson definition, and any files you place in the lesson directory will be made available at runtime to the configured directory. In NRE Labs, this is the `/antidote` directory.
-
-> This location is controlled by Syringe and configured using the `SYRINGE_LESSON_REPO_DIR` environment variable. See [Syringe configuration]() for more details.
-
-There are some "common" images you might consider using before building your own:
-
-**Image:** `antidotelabs/utility`
-
-**Source:** [https://github.com/nre-learning/nrelabs-curriculum/tree/master/images/utility](https://github.com/nre-learning/nrelabs-curriculum/tree/master/images/utility)
-
-> The `utility` image is a sort of "junk drawer". It has some basic things installed, like Python and a bunch of network automation related packages, and assorted other tools that are useful to have. The main intent behind this image was to provide a basic Linux CLI to launch into other things from. It has a basic security configuration to run an SSH server so that Syringe can get CLI access to it.
->
-> Generally if you're looking to show something using a Linux CLI, and the "thing" you want to show is either easily added to this image, or shown via files in the lesson directory, this image will be a good fit.
-
-**Image:** `image: antidotelabs/vqfx-snap1` 
-
-**Source:** [https://github.com/nre-learning/nrelabs-curriculum/tree/master/images/vqfx](https://github.com/nre-learning/nrelabs-curriculum/tree/master/images/vqfx)
-
-The `vqfx-snap1` image takes some shortcuts in order to boot quickly. A QEMU snapshot was taken after initial boot and initial configuration, and saved to the disk image.
-
-We have built three images using this process, which are accessible using the following image refs:
-
-* `antidotelabs/vqfx-snap1`
-* `antidotelabs/vqfx-snap2`
-* `antidotelabs/vqfx-snap3`
-
-For some reason, while this snapshotting does wonders for boot speed, it doesn't allow us to be able to change the MAC addresses post-boot. This is why we built three, to give you up to three to use in a topology. Note that we're very aware this is not ideal, and we're working hard to get a better vqfx image in place that boots quickly and doesn't have these drawbacks. Contributions welcome!
-
-> Previous versions of these docs included a listing for `vqfx-full` or `container-vqfx`. We have removed those for now, as those are still not ready for primetime. In the very near future, we're hoping to have a single vqfx image that is useful across the board, that doesn't have the drawbacks of the snapshotted version.
-
-Sometimes you need to go a bit further than what the current images offer, such as installing a dependency that doesn't exist in one of the primary images. For example, the `utility` image comes preinstalled with a number of Python libraries but naturally, the one you want might not be there. It might be easiest to simply add your library to the list of requirements in that image, rather than create your own. In this case, adding the necessary lines to the existing source Dockerfile or supporting files is all you need to do.
-
-### Create a New Image
-
-Okay, so you've decided you need to create a totally new image. The good news is that there is a ton of material out there to help you do this. While there are a few minor requirements you'll need to adhere to in order to build images for Antidote, the vast majority of what you'll need to know is contained in any reasonable Docker tutorial, especially content that focuses on building images. For now, start with tutorials like the ones below, and learn the basics of Docker images:
+In Antidote and NRE Labs, Endpoint Images are just Docker images that we use within the context of a lesson. As a result, the vast majority of what you need to know to build an Endpoint image is contained in any reasonable Docker tutorial, especially content that focuses on building images. For now, start with tutorials like the ones below, and learn the basics of Docker images:
 
 * [Docker: Getting Started](https://docs.docker.com/get-started/)
 * [Dockerfile Best Practices](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
 * [Interactive Katacoda Lesson on Docker](https://www.katacoda.com/courses/docker/2)
 
-Antidote isn't a container scheduler; it uses Kubernetes for the heavy lifting there. That means there's not a tremendous amount of work to get a "regular" Docker image to work in Antidote. In general, a container that works outside of Antidote will work just fine within Antidote.
+Some tips for building an image:
 
-The only exception to this rule is that the image supports anything configured within the [Endpoints](lessons/endpoints.md) and [Presentations](lessons/presentations.md) sections in your lesson definition. This is because Antidote needs to be able to reach your running container over the network in order to provide access. See [Presentation Options](lessons/presentations.md#presentation-options) for more details on how your Endpoint image should support these options.
+* **Keep it lightweight** - don't import the entire internet into your image. If your image needs more than 4GB of memory to run, and more cores than you have fingers, you've made a wrong turn. Include only that which is nece
+* **Keep it simple** - Endpoints in NRE Labs are for learning - they're not meant to be highly-available or fault-tolerant. Deploy the simplest version of your software when building images - the [StackStorm](https://github.com/nre-learning/nrelabs-curriculum/tree/master/images/stackstorm) image is a good example of this - all services running in a single container. This is **fine**.
+* **Use trusted, lightweight base images** - Default to using trusted images like `debian` or `centos` as your base image. This not only helps to keep image size down, but also helps us keep a handle of what's running in our images. Use [multi-stage builds](https://docs.docker.com/develop/develop-images/multistage-build/) if you need to keep the final image size to a reasonable number.
+* **Include the entire source** - in addition to the required files listed below, any scripts, configs, or misc. files needed to run "docker build" must be provided in any Pull Request. The only exception to this is [Large or Sensitive Files](images.md#large-or-sensitive-files).
 
-Images are automatically built using our back-end CI/CD workflows, and require a Makefile to be put in place that supports a particular way of being called. For each image directory in a curriculum, the build process runs the command `make docker`. All of the steps needed to build this image must be done automatically using that command. In addition, the `TARGET_VERSION` environment variable must be used by your Makefile to tag your image. This must default to `latest`, but can be overridden by our build process, by calling the Makefile like so:
+Note also that in most cases, images need to be built to be interactive. Anything configured within the [Endpoints](lessons/endpoints.md) and [Presentations](lessons/presentations.md) sections of a lesson definition will require some kind of network access, such as a running HTTP or SSH server. Even lesson endpoints that don't have explicit presentations will still have some kind of server, such as an API. Make sure you've considered this in building your image - some kind of network access will be necessary at runtime.
+
+## Required Files
+
+There are a few extra files needed by every image that are specific to NRE Labs:
+
+### Makefile
+
+Images are automatically built using our back-end CI/CD workflows, and require a Makefile to be put in place that supports a particular way of being called. You may include steps of your own if needed, but at a minimum, the Makefile **must** contain the following \(please insert your own image name\):
 
 ```text
-TARGET_VERSION=v0.4.0 make docker
+# SHELL=/bin/bash
+
+TARGET_VERSION ?= latest
+
+all: docker
+
+docker:
+	docker build --pull --no-cache -t antidotelabs/<image name here>:$(TARGET_VERSION) .
+	docker push antidotelabs/<image name here>:$(TARGET_VERSION)
 ```
 
-This will result in the image in question being tagged with `v0.4.0`. See [here](https://github.com/nre-learning/nrelabs-curriculum/tree/master/images/utility/Makefile) for an example of a Makefile that supports the required options and builds and pushes the docker container automatically.
+### Dockerfile
 
-In addition to the technical requirements for running an image in Antidote, there are few additional procedural requirements if you intend this image to be used within NRE Labs. First, for all NRE Labs contributions, the full source of the image \(i.e. Dockerfile and any other files referenced by it\) must be contributed in a Pull Request so that we can build it within our infrastructure and host it in the `antidotelabs` docker hub repository. This is a good idea for a bunch of reasons, especially operational and security best practices.
+All images must also come with a [Dockerfile](https://github.com/nre-learning/nrelabs-curriculum/blob/master/images/utility/Dockerfile). This allows us to build our own image, rather than directly using a third-party image. All necessary steps to customize this base image should be done here.
 
-In addition, if your image requires large files, \(pretty much anything over 10MB\) such as virtual machine disks or ISOs, you should add a step to your Dockerfile to download those files from their original location, preferably with integrity verification using SHA256 hash or similar. If for some reason that's not possible, [get in touch](https://nrelabs.io/community) with us to discuss alternatives.
+### Image Definition
 
-The `image` field of a lesson definition is passed directly to the underlying Kubernetes cluster. This means anything you can "docker pull" from there can be placed in your lesson definition. This means if you are running your own version of Antidote, you can host your own docker image repository just fine. In fact, even if you are aiming to contribute the lesson to the NRE Labs curriculum, this is the best way to build and work on your images prior to opening a Pull Request. When you open a pull request that includes a new image, we'll make sure the `images` reference gets corrected before going live. Until then, you can use any location that suits you.
+To use an image within NRE Labs, images must come with a meta-data file called `images.meta.yaml`. This is similar to the [meta-data file for lessons](lessons/) but much simpler.
+
+The best way to create a new image definition is using the [`antidote` command-line interface](../the-antidote-cli/), using the `antidote image create` subcommand. This will walk you through an interactive wizard that creates a new image definition with all the relevant fields. Note that this doesn't automatically provide any other required files, like Makefiles or Dockerfiles. You're still on the hook for doing this.
+
+Read the below for an example image definition, with comments in-line:
+
+```yaml
+---
+
+# Uniquely identify the image
+slug: stackstorm
+
+# Brief description of the image
+description: stackstorm
+
+# Should this image be run with privileges? (assume no)
+privileged: false
+
+# Username and password for connecting via an SSH presentation
+sshUser: antidote
+sshPassword: antidotepassword
+
+# Username and password used for configuration scripts
+configUser: antidote
+configPassword: antidotepassword
+
+# List of network interfaces for this image
+networkInterfaces:
+  - 'eth0'
+```
+
+## Large or Sensitive Files
+
+Occasionally, such as for [commercial software](../../other-resources/nre-labs-endpoint-images.md#commercial-software), we need to include sensitive files in the build process. This might be a commercial network operating system image, or perhaps a license file.
+
+If your image requires a large file \(pretty much anything over 10MB\) that already exists somewhere else on the internet, rather than trying to put it in the lesson directory, add a step to your Dockerfile or Makefile to download those files from their original location \(preferably with integrity verification using SHA256 hash or similar\). 
+
+If you have a large or sensitive files you wish to include in an NRE Labs image, but don't want those files to be publicly available, the NRE Labs project also maintains a private cloud storage bucket that is accessible only within our build system, and these are downloaded during the build process. [Get in touch with us](https://discuss.nrelabs.io/) and we'll help you figure out a way to get these into the curriculum safely.
 

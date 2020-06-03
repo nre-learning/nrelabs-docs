@@ -15,9 +15,9 @@ In this first kickoff, we'll begin gathering ideas for things we want to get don
 
 While the kickoff is meant to get a starter list together, it's likely that more ideas will come up at any time in the release cycle. This is normal, and expected. However, the first week of a release cycle should strive to ensure the really important things are well-documented and if possible, assigned.
 
-Another very important task for this initial meeting is to decide which Antidote platform this curriculum release will [target](curriculum-release-process.md#appendix-platform-targeting). If a new version is desired, [PTR]() will be immediately updated to that stable release at the beginning of the curriculum development cycle. Similarly, the [selfmedicate](previewing-locally.md) should also be updated with this version, and curriculum developers should re-pull on this repository to get the latest manifests.
+Another very important task for this initial meeting is to decide which Antidote platform this curriculum release will [target](curriculum-release-process.md#appendix-platform-targeting). Once this is determined, the [preview service](../creating-contributing/preview-your-changes.md) will be updated to use this version to ensure compatibility.
 
-A project plan for the release that represents the work discussed in the previous week will be posted to the [curriculum repo's projects list](https://github.com/nre-learning/nrelabs-curriculum/projects) and presented to attendees. This is a kanban-board style project planning tool that allows all to easily see the state of work for a given release.
+A project plan for the release that represents the work discussed in the previous week will be posted to the [projects list](https://github.com/nre-learning/nrelabs-curriculum/projects) and presented to attendees. This is a kanban-board style project planning tool that allows all to easily see the state of work for a given release.
 
 Finally, a post will be created in the [Curriculum Project Management](https://discuss.nrelabs.io/c/curriculum-project-management) topic to notify everyone that the work on this release has begun, with the title "Release Kickoff...". This forum thread should serve as the center of all release planning discussions, and all are welcome to participate. If you have something you think should be included in or excluded from the release plan, speak up there.
 
@@ -28,8 +28,6 @@ Finally, a post will be created in the [Curriculum Project Management](https://d
 Once a release cycle is kicked off, the only thing left to do is....do the work! At this point, a relatively complete list of things to do for this release should be captured in a Github project, which will be linked to in the community forum kickoff post. Contributors can use this as a guide, or do other work they think is useful.
 
 The [curriculum contribution guide](../creating-contributing/contributing-content.md) should be consulted repeatedly to ensure you're on the right track with respect to curriculum contributions. All of those guidelines apply here. It's important for contributions to follow this lifecycle, so that release managers can properly coordinate work across the project.
-
-The [selfmedicate development environment](previewing-locally.md) should also be used to locally preview curriculum content that is being developed.
 
 ### Step 3 - Testing Phase
 
@@ -55,7 +53,7 @@ In the following week \(or at most two\), the cycle will repeat, and a new relea
 
 ### Appendix - Platform Targeting
 
-The NRE Labs curriculum is released separately from the underyling Antidote platform. As a result, the platform's release cycle will charge ahead with new features, and it's up to the curriculum release planning to "target" a stable version of the platform to develop against. The below image shows an **example** of how this might work:
+The NRE Labs curriculum is released separately from the underlying Antidote platform. As a result, the platform's release cycle will charge ahead with new features, and it's up to the curriculum release planning to "target" a stable version of the platform to develop against. The below image shows an **example** of how this might work:
 
 ![](../.gitbook/assets/curriculum_target.png)
 

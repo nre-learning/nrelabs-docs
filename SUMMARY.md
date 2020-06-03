@@ -12,17 +12,16 @@
 ## Other Resources
 
 * [Curriculum Release Process](other-resources/curriculum-release-process.md)
-* [Creating Endpoint Images](other-resources/creating-endpoint-images.md)
-* [NRE Labs Git Repositories](other-resources/nre-labs-git-repositories.md)
-* [Help! I'm Not A Developer!](other-resources/help-im-not-a-developer.md)
-* [The Learner's Guide to Jupyter Notebooks](other-resources/the-learners-guide-to-jupyter-notebooks.md)
-* [\(Legacy\) Local Preview](other-resources/previewing-locally.md)
+* [NRE Labs Endpoint Images](other-resources/nre-labs-endpoint-images.md)
+* [Git Tips](other-resources/nre-labs-git-repositories.md)
+* [Jupyter Notebooks](other-resources/the-learners-guide-to-jupyter-notebooks.md)
 * [Tips and FAQs](other-resources/tips-and-faqs.md)
 
 ## Antidote
 
 * [Architecture](antidote/antidote-architecture/README.md)
   * [Antidote Services](antidote/antidote-architecture/antidote-web.md)
+  * [Lesson Directory Mapping](antidote/antidote-architecture/lesson-directory-mapping.md)
   * [Lesson Networking](antidote/antidote-architecture/lesson-networking.md)
 * [The Antidote CLI](antidote/the-antidote-cli/README.md)
   * [Create Curriculum Resources](antidote/the-antidote-cli/create-curriculum-resources.md)
@@ -40,4 +39,9 @@
 * [Development](antidote/development/README.md)
   * [Hacking Instructions](antidote/development/hacking-instructions.md)
   * [Antidote Release Process](antidote/development/antidote-release-process.md)
+
+## Misc
+
+* [Help! I'm Not A Developer!](misc/help-im-not-a-developer.md)
+* [\(Legacy\) Local Preview](misc/previewing-locally.md)
 

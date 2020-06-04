@@ -11,6 +11,7 @@
 
 ## Other Resources
 
+* [Curriculum Quality Standards](other-resources/curriculum-quality-standards.md)
 * [Curriculum Release Process](other-resources/curriculum-release-process.md)
 * [NRE Labs Endpoint Images](other-resources/nre-labs-endpoint-images.md)
 * [Git Tips](other-resources/nre-labs-git-repositories.md)
@@ -37,7 +38,6 @@
     * [Endpoint Configuration](antidote/object-reference/lessons/endpoint-configuration.md)
   * [Collections](antidote/object-reference/collections.md)
 * [Development](antidote/development/README.md)
-  * [Hacking Instructions](antidote/development/hacking-instructions.md)
   * [Antidote Release Process](antidote/development/antidote-release-process.md)
 
 ## Misc

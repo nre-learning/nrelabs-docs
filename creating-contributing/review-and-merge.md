@@ -7,10 +7,7 @@ With the exception of very small Pull Requests to fix things like typos, the cha
 * All comments/questions will be constructive in nature, aimed at helping you as a contributor, and the overall project grow.
 * We always want to end every pull request in a "merge" if at all possible. Every question or suggestion is aimed at putting you closer to getting your contribution into the project.
 
-All reviews will be aimed at keeping the quality of the curriculum high. [CONTRIBUTING.md](https://github.com/nre-learning/nrelabs-curriculum/blob/master/CONTRIBUTING.md) contains a semi-formal definition for the quality standards of the NRE Labs curriculum; please read that document and do your best to ensure that your content strives to meet those standards - it will make the review process a lot smoother.If you are a maintainer or creator for an open source project in the infrastructure or automation space, we would love the opportunity to host tutorials for your project. We feel very strongly that if you're maintaining an open source project, that you should have the right of first refusal for representing it in the NRE Labs curriculum. Please get in touch with us on the community forums and we'll make every effort to bring you up to speed with the environment so that you can show off your project on the site.
+All reviews will be aimed at keeping the quality of the curriculum high. Please read the [Curriculum Quality Standards](../other-resources/curriculum-quality-standards.md) and do your best to ensure that your content strives to meet those standards - it will make the review process a lot smoother.
 
-You can explicitly request reviews from anyone in your pull requests, but the following groups exist to help categorize potential reviewers:
-
-* [Community Managers](https://github.com/orgs/nre-learning/teams/community-managers)
-* [Technical Reviewers](https://github.com/orgs/nre-learning/teams/technical-reviewers)
+Once your Pull Request is merged, it will be automatically included in the next [release of the curriculum](../other-resources/curriculum-release-process.md), and published on the site when that process finishes.
 

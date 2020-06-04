@@ -20,9 +20,7 @@ Make sure you also take a look at your [notification settings](https://github.co
 
 ## How and When to Open an Issue
 
-Without a doubt, the [`community site`](https://discuss.nrelabs.io/) is the best place to go for general discussions and support with developing lessons, or even working with code on the Antidote platform. However, sometimes it's necessary to make more of a definitive statement, such as "I think I'm encountering a bug, here's what I'm seeing", or "I really with Antidote did X". In these cases, where such a statement may not have an immediate answer but clearly represents some level of work to satisfy, a Github Issue is often the best place to post that.
-
-> In some cases, project leaders will provide guidance when something is or isn't appropriate as a Github Issue. In fact, sometimes it's not immediately clear if an Issue is warranted until the conversation has taken place elsewhere first. In general, don't stress out too much about when something is or isn't appropriate as an Issue, but be willing to move where the conversation needs to go.
+The [community forums](https://discuss.nrelabs.io/) are the best place to go for general discussions and support with developing lessons, or even working with code on the Antidote platform. However, sometimes it's necessary to make more of a definitive statement, such as "I think I'm encountering a bug, here's what I'm seeing", or "I really with Antidote did X". In these cases, where such a statement may not have an immediate answer but clearly represents some level of work to satisfy, a GitHub Issue is often the best place to post that.
 
 Issues aren't restricted only to folks to have pushed code or other content to a repository. If you have constructive feedback, that is just as valuable a contribution, and opening a new Issue is a great way to do that. Examples include:
 
@@ -36,17 +34,17 @@ Every repository has an "Issues" tab that you can click to take you to the curre
 
 There's a big green button at the top left of that page \(once you click the Issues tab\) that said "New Issue". Clicking that will take you to a form where you can provide a title and description. For some Antidote repositories, these fields will be pre-populated with a framework of the kind of information that would be very helpful to anyone that looks into things for you. In general, follow the guidance that's there, but post as much detail as you can, and be ready to provide more if asked.
 
-## Using Issues to Identify Low-Hanging Fruit
+## Using Labels to Identify Work Complexity
 
-If you have poked around at the open issues, you may notice that some of them have colorful tags attached to them. Github calls these "labels", and they are useful for providing additional categorization for issues or pull requests.
+If you have poked around at the open issues, you may notice that some of them have colorful tags attached to them. GitHub calls these "labels", and they are useful for providing additional categorization for issues or pull requests.
 
 Lots of folks approach open source projects with some enthusiasm and willingness to get involved, but often don't know where to start. It's pretty difficult to look at a list of bug reports and have any idea how far the rabbit hole goes for any of them. The best way to get started with a project is to take on a task that gets you that experience without requiring you to spin your wheels for weeks, which is super demotivating.
 
-For you, we've created complexity ratings in the form of Github Issue labels, and try our best to apply them to each issue on the Antidote repositories:
+For you, we've created complexity ratings in the form of GitHub Issue labels, and try our best to apply them to each issue on the Antidote repositories:
 
 ![](../.gitbook/assets/complexitylabels.png)
 
-These are things like enhancements or bugfixes that we've set aside that are relatively approachable, and don't require you to know how everything works in order to satisfy them. What this means for you, is you can easily get a look at a repositories low-hanging fruit tasks by filtering issues by the `complexity: low` label. For the `nrelabs-curriculum` repository, [this URL gets you straight there](https://github.com/nre-learning/nrelabs-curriculum/labels/complexity%3A%20low).
+These are things like enhancements or bug-fixes that we've set aside that are relatively approachable, and don't require you to know how everything works in order to satisfy them. What this means for you, is you can easily get a look at a repositories low-hanging fruit tasks by filtering issues by the `complexity: low` label. For the `nrelabs-curriculum` repository, [this URL gets you straight there](https://github.com/nre-learning/nrelabs-curriculum/labels/complexity%3A%20low).
 
-However, nearly all Antidote repositories have the same taxonomy, so no matter where your interests lie, this mechanism is in place for you to identify those "entrance ramp" tasks. If you lean more towards web or front-end development, the [complexity: low tag in antidote-web](https://github.com/nre-learning/antidote-web/labels/complexity%3A%20low) __may interest you. If you like to work on back-end systems, or with languages like Python or Go, the [same tag in Syringe](https://github.com/nre-learning/antidote-web/labels/complexity%3A%20low) may interest you.
+However, nearly all Antidote repositories have the same taxonomy, so no matter where your interests lie, this mechanism is in place for you to identify those "entrance ramp" tasks. If you lean more towards web or front-end development, the [complexity: low tag in antidote-web](https://github.com/nre-learning/antidote-web/labels/complexity%3A%20low) __may interest you. If you like to work on back-end systems, or with languages like Python or Go, [the same tag in antidote-core ](https://github.com/nre-learning/antidote-web/labels/complexity%3A%20low)may interest you.
 

@@ -2,7 +2,7 @@
 
 One of the best attributes of the Antidote platform is that it takes on as much complexity as is needed on the back-end in order to provide a seamless learning experience to the user on the front-end. A big part of this is the ability to automatically configure all lesson endpoints to fit the scenario being used to teach a concept, so that when the learner is ready to take on a subject, they aren't distracted by fiddling with configurations to "prep" the lesson.
 
-Much of this advantage is gleaned from the fact that all Endpoints are started from Docker images, which are cryptographically guaranteed to start the same way each time. All Endpoint software dependencies, configurations, scripts, etc. are built right into the image. However, it's not always possible to put **everything** into this image at build time. For instance, a network device can be built as a Docker image, but depending on the Lesson or Stage, might have wildly different configurations, in order to teach a particular concept. For this, Antidote offers the ability to configure Endpoints dynamically once they're started from their base image.
+Much of this advantage is gleaned from the fact that all Endpoints are started from Docker images, which start the same way each time. All Endpoint software dependencies, configurations, scripts, etc. are built right into the image. However, it's not always possible to put **everything** into this image at build time. For instance, a network device can be built as a Docker image, but depending on the Lesson or Stage, might have wildly different configurations, in order to teach a particular concept. For this, Antidote offers the ability to configure Endpoints dynamically once they're started from their base image.
 
 > Don't overdo it with endpoint configuration. The fact that Antidote is powered by containers which are cryptographically guaranteed to start from the same base image each time is a huge advantage and it's useful to bake configurations into the container image wherever possible. So, use the configuration options below, but in proper balance with an already fairly functional base image configuration.
 
@@ -10,10 +10,8 @@ To accomplish this configuration, the Antidote project maintains a `configurator
 
 | Variable | Description |
 | :--- | :--- |
-| SYRINGE\_TARGET\_HOST | Set to the IP address of the endpoint. Useful because this is always dynamic |
-| ANSIBLE\_HOST\_KEY\_CHECKING | Set to "False" because I'm lazy and this is not a production environment. |
-
-The source for the `configurator` image is located in the [antidote-images](https://github.com/nre-learning/antidote-images/tree/master/configurator]) repository. This image is what's used as the runtime environment for all configuration options. The options below are limited to what's been installed in this image. So, if you wish to use a Python library or Ansible module that's not present, you may be able to add it to this image. If widely applicable enough, we'll consider adding it for everyone.
+| ANTIDOTE\_TARGET\_HOST | Set to the IP address of the endpoint. Useful because this is always dynamic |
+| ANSIBLE\_HOST\_KEY\_CHECKING | Set to "False" so that Ansible is able to connect to any image if used \(we don't pre-populate our images with known keys\) |
 
 Endpoints are individually configured on a per-stage basis, and the Antidote platform provides several mechanisms for accomplishing this, so lesson builders have options when it comes to configuring their Endpoints.
 

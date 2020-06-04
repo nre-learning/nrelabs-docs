@@ -1,38 +1,8 @@
 # Connections
 
-Another cool thing about Antidote is that it allows lesson creators to build complex topologies of Endpoints through some simple back-end networking orchestrated by [Syringe]() and made possible by Kubernetes and a special networking plugin.
+In Antidote, [Lesson Endpoints](endpoints.md) are spun up as containers within a Kubernetes cluster. As a result, they all have a single `eth0` network interface by default. However, as NRE Labs is designed to teach complex infrastructure topics, often a single network interface is not enough. This document will explain how we use a concept called "Connections" to provide multiple interconnections directly between Lesson endpoints.
 
-We explain **how** this all works over in the [Architecture docs](../../antidote-architecture/). The way you use this functionality in a lesson is fairly simple. The first thing you should know is that all Endpoints are connected to the same "management" network. The `eth0` interface of every container is connected here, and each can communicate with each other by default.
-
-The example below shows three Endpoints in a lesson definition:
-
-```text
-- name: vqfx1
-  image: antidotelabs/vqfx-snap1
-  configurationType: napalm-junos
-  presentations:
-  - name: cli
-    port: 22
-    type: ssh
-
-- name: vqfx2
-  image: antidotelabs/vqfx-snap2
-  configurationType: napalm-junos
-  presentations:
-  - name: cli
-    port: 22
-    type: ssh
-
-- name: vqfx3
-  image: antidotelabs/vqfx-snap3
-  configurationType: napalm-junos
-  presentations:
-  - name: cli
-    port: 22
-    type: ssh
-```
-
-You can think of these like nodes in a graph topology, as all networks are. So, if Endpoints are nodes, then the edges, or the connections between these nodes, are `connections`:
+Imagine you have a lesson definition with three endpoints: `vqfx1`, `vqfx2`, and `vqfx3`. You can think of these like nodes in a graph topology, as all networks are. So, if Endpoints are nodes, then the edges, or the connections between these nodes, are `connections`:
 
 ```text
 connections:
@@ -44,43 +14,13 @@ connections:
   b: vqfx1
 ```
 
-This is a simple list of connections from `a` to `b`. The first connection is from `vqfx1` to `vqfx2` and so on. Syringe will create virtual networks for each Connection, and then attach Endpoints to them.
+This is a simple list of connections from `a` to `b`. The first connection is from `vqfx1` to `vqfx2` and so on. Antidote will create virtual networks for each Connection, and then attach Endpoints to them.
 
-You can see the attachment to these networks by describing any Kubernetes pod using the `kubectl` CLI that represents an Endpoint:
+## How will these networks show up in my lesson?
 
-```text
-kubectl -n=12-abcdefghijkl-ns describe pod vqfx1
-Name:               vqfx1
-Namespace:          12-abcdefghijkl-ns
-Priority:           0
-PriorityClassName:  <none>
-Node:               antidote-worker-6l0v/10.138.0.7
-Start Time:         Sun, 16 Jun 2019 22:16:16 -0700
-Labels:             lessonId=12
-                    podName=vqfx1
-                    syringeManaged=yes
-Annotations:        k8s.v1.cni.cncf.io/networks: [{"name":"vqfx1-vqfx2-net"},{"name":"vqfx3-vqfx1-net"}]
-                    k8s.v1.cni.cncf.io/networks-status:
-                    [{
-                        "name": "",
-                        "ips": [
-                            "10.32.29.138"
-                        ],
-                        "default": true,
-                        "dns": {}
-                    },{
-                        "name": "12-abcdefghijkl-ns-vqfx1-vqfx2-net",
-                        "ips": [
-                            "10.10.0.2"
-                        ],
-                        "dns": {}
-                    },{
-                        "name": "12-abcdefghijkl-ns-vqfx3-vqfx1-net",
-                        "ips": [
-                            "10.10.0.2"
-                        ],
-                        "dns": {}
-```
+The way these networks will be made available will depend on how the image is built. If a native container, `net1`, `net2`, and so forth. If a VM-in-container, it could be anything. In the future we may go with a solution like Kata containers by default, which could also add a wrinkle.
 
-As mentioned previously, the first interface/network is always the "management" network, and since `vqfx1` was a member of two defined Connections, it has two additional networks.
+At the moment, the best place to know which network interfaces will be available to you is to consult the the image metadata files, which includes a list of network interfaces that the image makes available to be used. This is an ordered list, and interfaces are consumed in order of the Connections that reference that endpoint.
+
+
 

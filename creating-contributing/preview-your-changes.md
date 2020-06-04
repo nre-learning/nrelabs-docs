@@ -26,10 +26,5 @@ If you expand the `Details` drop-down in the preview bot comment, you'll notice 
 * **Logs** - this is a link to a GitHub Gist that contains logs from all of the various antidote components, such as antidote-core. This may provide some answers if you are not able to see your content in the preview instance's lesson catalog.
 * **Inspect Traces** - this is a link to a [Jaeger](https://www.jaegertracing.io/) instance which collects traces on interactions with the provisioned instance of Antidote for your content. If you are able to see your content in the preview instance's lesson catalog, but are encountering some kind of problem when trying to launch a lesson, this may contain useful information.
 
-## Known Issues
 
-This is a new service, and while the goal for this service is to make things **way easier** for contributors, it is a new service, so your patience and feedback is greatly appreciated. There are a few issues we are currently aware of:
-
-* Due to the way our cluster certificates have been provisioned, HTTP presentations don't show up in previews properly
-* We don't currently capture logs for configuration changes, only high-level Antidote setup. This catches basic validation errors on startup, but doesn't catch problems with inter-stage configuration scripts. In the meantime, if you are encountering configuration problems in a previewed lesson and don't know why, a maintainer may be able to help, so comment in your PR.
 

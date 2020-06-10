@@ -27,15 +27,9 @@ If you got to the end of this list and have decided to create a new image or aug
 
 NRE Labs is aimed at educating about modern infrastructure engineering processes. While open source has had a dramatic impact on this space over the last decade, which is well-represented by the presence of open-source in the NRE Labs curriculum, it's not possible for the NRE Labs project to **only** include open source software. Most infrastructure professionals are not able to avoid commercial software entirely, and neither can this curriculum.
 
-There are two main things to address when discussing
+All commercial software in the curriculum will continue to adhere to the [Curriculum Quality Standards](curriculum-quality-standards.md). Whether open source or commercial, the technology is never the sole focus of the content - it is the skill-sets that a learner can acquire. While we'll continue to have a healthy mix of open and closed software, no matter what, the focus will be on the content and improving the skills of the infrastructure professional.
 
-1. Balance - the focus isn't on the \*thing\* but the content. Talk about how we support it, and how we'll continue to balance against it with other things. 
-2. Fair - all commercial software is welcome to participate.  Talk about how ANY vendor is welcome to participate - point out Junos, Cumulus and RH \(Tower\) and maybe Extreme as leading examples.
-3. Private - you don't have to post your software publicly. We have private mechanisms.
+All contributions that adhere to the spirit of the project are welcome. We already have network operating systems from Juniper, and Cumulus Networks \(with more on the way\), and software from Red Hat Ansible. This is in addition to the myriad of open source tools and projects that are heavily featured in our curriculum.
 
-
-
-
-
-
+Commercial software that has been contributed doesn't have to be publicly downloadable. We have mechanisms in place that allow us to control where the commercial software is distributed, giving the learner access to the software only through the NRE Labs portal. Reach out to us via [the community forums](https://discuss.nrelabs.io/c/general-discussion/6) or [via email](mailto:nrelabs@gmail.com) for more details on this.
 

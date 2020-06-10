@@ -4,9 +4,7 @@ The `antidote`tool comes with the ability quickly bootstrap a new resource, such
 
 You can access this wizard by simply running `antidote <resource> create`. So, to create a new lesson, run `antidote lesson create`. You'll immediately be presented with a series of prompts to provide the necessary information to bootstrap that lesson:
 
-&lt; insert asciinema or youtube video &gt;
-
-&lt;Make sure you transfer all of the useful information from the original post &gt;
+{% embed url="https://www.youtube.com/watch?v=G3sM\_5rk2yc" %}
 
 > Similar commands may exist for other resources like `images` and `collections`.
 

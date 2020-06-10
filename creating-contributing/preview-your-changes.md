@@ -19,6 +19,10 @@ Once all of the above have been addressed, the NRE Labs Preview Service will aut
 
 Provided the above requirements continue to be met, you can continue to push commits to your pull request, and previews will be generated for you. This allows you to easily iterate on your content within the pull request, and see your updates quickly.
 
+You can see the preview service in action in the following video:
+
+{% embed url="https://www.youtube.com/watch?v=c4a2PP4gJqE" %}
+
 ## Identifying Issues
 
 If you expand the `Details` drop-down in the preview bot comment, you'll notice a few links to additional resources that may help you troubleshoot any problems with your lesson:

@@ -6,6 +6,8 @@ Before you get started, please read the [NRE Labs Curriculum Standards](https://
 
 > **NOTE for Open Source Maintainers -** we would love the opportunity to host tutorials for your project. If you've created or are maintaining an open source project you should have the right of first refusal for contributing a lesson on your project in the NRE Labs curriculum.
 
+{% embed url="https://www.youtube.com/watch?v=HOU5k77RQNc" caption="This video will walk you through some of the basics." %}
+
 Some helpful tips before getting started:
 
 * **Communicate your Idea** - The NRE Labs curriculum should be treated like any other open source project. It's built via contributions from all over the world, all the time. So before getting started, you should first spend time communicating your plans with the rest of the community. Peruse the [existing GitHub issues](https://github.com/nre-learning/nrelabs-curriculum/issues) to see if anyone is already working on something similar to what you have in mind. Maybe someone else is looking to build a similar lesson, and this gives you the opportunity to let them know, and combine forces. lf you are looking to collaborate on a lesson, [opening an issue](https://github.com/nre-learning/nrelabs-curriculum/issues/new) is often a good way to see if anyone in the community is interested in helping out.
@@ -57,6 +59,8 @@ git checkout -b new-branch-name
 ## Bootstrap Your Content
 
 Next, you'll need the [Antidote CLI](../antidote/the-antidote-cli/). This is the command-line tool for bootstrapping new content for NRE Labs like lessons. Install this tool using the instructions provided, and then [follow the instructions here](../antidote/the-antidote-cli/create-curriculum-resources.md) to bootstrap a new curriculum resource such as a lesson. These interactive wizards will create a skeleton copy of a new resource within your existing curriculum directory, which you can then use as a starting point.
+
+{% embed url="https://www.youtube.com/watch?v=G3sM\_5rk2yc" caption="Here\'s a light introduction to using the Antidote CLI to bootstrap an example lesson" %}
 
 Once finished with the initial bootstrap, you'll also want to [validate your local curriculum](../antidote/the-antidote-cli/validating-an-existing-curriculum.md). This validation step can identify any problems with what you've built, and is a necessary next step after the initial bootstrap. The NRE Labs CI pipeline uses this command to validate that the curriculum is well-formed, so it's worth it to run this locally yourself first.
 

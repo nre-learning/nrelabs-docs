@@ -2,6 +2,8 @@
 
 In [First Steps](getting-started.md), you learned to use the `antidote`CLI tool to bootstrap and validate your new content. It is now time to push these changes to GitHub, and open a Pull Request. This will allow you to use the [Preview Service](preview-your-changes.md) to see your new content in action, as well as eventually get this content merged into the main curriculum repository.
 
+{% embed url="https://www.youtube.com/watch?v=mfEVoV7FiE0" caption="This video is a brief introduction to opening a PR for NRE Labs" %}
+
 ## Commit and Push
 
 Once you've made some changes, you might be wanting to save your progress in Git so that you can track your progress. It's generally good practice to [make commits](https://git-scm.com/book/en/v1/Git-Basics-Recording-Changes-to-the-Repository#Committing-Your-Changes) somewhat often so that if you make mistakes, you can roll back easily.

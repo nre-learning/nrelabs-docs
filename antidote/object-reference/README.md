@@ -6,7 +6,7 @@ Some tools are designed to make things easier to teach, others makes things easi
 
 In Antidote, all curriculum content is defined through a set of types, usually represented either as YAML files, or as properties of a type that is represented in a YAML file. We'll loosely refer to these things as "objects", and they \(as well as any supporting files\) are stored within a Git repository, forming a curriculum. This section of the documentation is meant to be used as a reference - all supported Antidote objects are defined and explained in these sections.
 
-It's important to note that while this portion of the documentation is designed to inform about details, the vast majority of what's contained here is available through creation wizards of [the `antidote` CLI tool](../the-antidote-cli/).
+It's important to note that while this portion of the documentation is designed to inform about details, the vast majority of what's contained here is available through the various creation wizards of [the `antidote` CLI tool](../the-antidote-cli/).
 
 
 

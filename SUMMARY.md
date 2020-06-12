@@ -42,6 +42,7 @@
 
 ## Misc
 
+* [Tools for Presenters](misc/tools-for-presenters.md)
 * [Help! I'm Not A Developer!](misc/help-im-not-a-developer.md)
 * [\(Legacy\) Local Preview](misc/previewing-locally.md)
 

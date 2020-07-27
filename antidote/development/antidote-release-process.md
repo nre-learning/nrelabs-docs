@@ -4,7 +4,7 @@ The Antidote platform is comprised of multiple subprojects, which all need to be
 
 ### 1 - Release Kickoff
 
-At the beginning of a release cycle, we'll have a "kickoff" during one of the weekly standups. This kickoff is primarily focused on establishing the basic parameters of the release, beginning the process of gathering deliverables intended for the release, and to ensure everyone knows where to find the latest information on progress.
+A post will be created in the [Project Management](https://discuss.nrelabs.io/c/project-management/10) forum topic to notify everyone that the work on this release has begun, with the title "Release Kickoff...". This forum thread should serve as the center of all release planning discussions, and all are welcome to participate. If you have something you think should be included in or excluded from the release plan, speak up there.
 
 In this first kickoff, we'll begin gathering ideas for things we want to get done in this release. These will be retrieved from various sources:
 
@@ -19,8 +19,6 @@ In this first kickoff, we'll begin gathering ideas for things we want to get don
 While the kickoff is meant to get a starter list together, it's likely that more ideas will come up at any time in the release cycle. This is normal, and expected. However, the first week of a release cycle should strive to ensure the really important things are well-documented and if possible, assigned.
 
 A project plan for the release that represents the work discussed in the previous week will be posted to the [nre-learning org's projects list](https://github.com/orgs/nre-learning/projects) and presented to attendees. This is a kanban-board style project planning tool that allows all to easily see the state of work for a given release.
-
-A post will be created in the [Platform Project Management](https://community.networkreliability.engineering/c/platform-project-management) topic to notify everyone that the work on this release has begun, with the title "Release Kickoff...". This forum thread should serve as the center of all release planning discussions, and all are welcome to participate. If you have something you think should be included in or excluded from the release plan, speak up there.
 
 > Not all work fits neatly into a release plan, and that's okay. Contributions of any kind can reasonably take place at any time. The purpose of a release plan isn't to put limits on the work that can be done for a release, but rather to ensure that the important things that really **need** to get done are accounted for. If you want to work on something that's not explicitly asked for in the release plan, that's totally fine.
 

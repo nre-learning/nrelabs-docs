@@ -7,7 +7,7 @@ You can always find the latest release[ here](https://github.com/nre-learning/sy
 {% tabs %}
 {% tab title="macOS" %}
 ```text
-curl -Lo antidote.tar.gz https://github.com/nre-learning/antidote-core/releases/download/v0.6.2/antidote-darwin-amd64.tar.gz
+curl -Lo antidote.tar.gz https://github.com/nre-learning/antidote-core/releases/download/v0.7.0/antidote-darwin-amd64.tar.gz
 tar xvzf antidote.tar.gz
 ./antidote -h
 ```
@@ -16,7 +16,7 @@ tar xvzf antidote.tar.gz
 {% tab title="Windows \(x64\)" %}
 ```text
 $ProgressPreference = 'SilentlyContinue'
-Invoke-WebRequest https://github.com/nre-learning/antidote-core/releases/download/v0.6.2/antidote-windows-amd64.zip -O antidote.zip
+Invoke-WebRequest https://github.com/nre-learning/antidote-core/releases/download/v0.7.0/antidote-windows-amd64.zip -O antidote.zip
 Expand-Archive -Force -LiteralPath 'antidote.zip' -DestinationPath .
 .\antidote.exe -h
 ```
@@ -24,7 +24,7 @@ Expand-Archive -Force -LiteralPath 'antidote.zip' -DestinationPath .
 
 {% tab title="Linux \(x64\)" %}
 ```text
-curl -Lo antidote.tar.gz https://github.com/nre-learning/antidote-core/releases/download/v0.6.2/antidote-linux-amd64.tar.gz
+curl -Lo antidote.tar.gz https://github.com/nre-learning/antidote-core/releases/download/v0.7.0/antidote-linux-amd64.tar.gz
 tar xvzf antidote.tar.gz
 ./antidote -h
 ```

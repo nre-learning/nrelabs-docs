@@ -1,34 +1,48 @@
 # Preview Your Changes
 
-> Note also that this service will only work once all of the image requirements for your content have been satisfied. If you are planning to add or modify curriculum endpoint images, please read "[NRE Labs Endpoint Images](../other-resources/nre-labs-endpoint-images.md)" first, as this must be handled separately, before any content contributions can be made. This preview service will not work properly unless this is done.
->
-> Please [post to the forums](https://discuss.nrelabs.io/c/antidote-support/5), or to the relevant Pull Request if you have issues with this documentation or the preview service.
+When building your content, eventually you'll reach the point where you want to see how it will appear on the NRE Labs site. This is possible simply by opening a Pull Request, which we covered in the previous step.
 
-The NRE Labs curriculum repository is powered by a helpful "Preview Service". This is designed to make it easy to see your new content in action before it's merged to `master`, by building a fully functional version of the NRE Labs site on your own subdomain, using your branch/fork. This is the only officially supported mechanism for previewing NRE Labs contributions, not only because of its simplicity \(all you need to do is open the PR\) but also because it allows you to preview content that makes use of the full catalog of Endpoint Images in the NRE Labs curriculum \(some of these contain commercial software and are not publicly available for download\).
+When you open a Pull Request, like any other software project, a series of automated checks take place to ensure some of the basics are in place. These include things like checking to make sure the CHANGELOG has been updated, some simple spellchecking, and validation of the lesson layout and metadata.
 
-There are a few things that are required before this part of the pipeline becomes useful/usable:
+When you open a Pull Request, these checks immediate appear in the portion of the page highlighted in red below:
 
-* All images used by your lesson must have already been merged to `master` and available via the nightly build. If not, please see "[NRE Labs Endpoint Images](../other-resources/nre-labs-endpoint-images.md)" for more.
-* Your branch of the curriculum must pass all CI checks. This includes a set of tests for ensuring the CHANGELOG is updated, basic spellchecks pass, and that the curriculum passes Antidote validation tests. This will appear as a set of checks by TravisCI near the bottom of the conversation pane in your Pull Request.
+![](../.gitbook/assets/0-build-status.png)
 
-If any of these are not true, the remainder of this document, and the preview service in general will not be useful for you. So please ensure these prerequisites have been met first before continuing - otherwise any generated previews may not work properly, or may not be generated at all.
+These basic checks happen first and if there are any problems here, the automated process stops, and will not continue until those problems are addressed.
 
-Once all of the above have been addressed, the NRE Labs Preview Service will automatically generate a live preview of your changes, and post these details via a comment in your Pull Request.
+![](../.gitbook/assets/5-prebuild-failed.png)
 
-![](../.gitbook/assets/screenshot-from-2020-04-20-15-45-39.png)
+At any stage, including failures like the one pictured above, you can click on "Details" to the right of each check, to get more information about the progress of each check. Note that all checks labeled "Required" **must** pass in order for your Pull Request to be accepted, but that doesn't mean that if it does pass that your PR can be merged immediately - other changes may be requested by project maintainers beyond the simple checks performed here.
 
-Provided the above requirements continue to be met, you can continue to push commits to your pull request, and previews will be generated for you. This allows you to easily iterate on your content within the pull request, and see your updates quickly.
+If the initial checks do pass, your contribution will go through a build process, which should only take a few minutes or less. This process will first build any [endpoint images](../other-resources/nre-labs-endpoint-images.md) that have changed in your PR:
 
-You can see the preview service in action in the following video:
+![](../.gitbook/assets/3-building.png)
 
-{% embed url="https://www.youtube.com/watch?v=c4a2PP4gJqE" %}
+This is another step that could fail. For instance, if your image's Dockerfile contains some kind of error, or something else causes the build process to fail, the corresponding check above will fail, and you can click "Details" to view the build logs for that step. This will allow you to see exactly what failed, and identify a next step for fixing the problem.
 
-## Identifying Issues
+![](../.gitbook/assets/7-image-build-failed-details.png)
 
-If you expand the `Details` drop-down in the preview bot comment, you'll notice a few links to additional resources that may help you troubleshoot any problems with your lesson:
+> You should first ensure that your images [build on their own](../antidote/object-reference/images.md#building-an-image) on your local machine before pushing them into your Pull Request. Please do not use this system as a way of iterating through the creation of an image from scratch, but rather as a last step to ensure an image that you believe is close to being finished, truly satisfies the requirements of the NRE Labs platform.
 
-* **Logs** - this is a link to a GitHub Gist that contains logs from all of the various antidote components, such as antidote-core. This may provide some answers if you are not able to see your content in the preview instance's lesson catalog.
-* **Inspect Traces** - this is a link to a [Jaeger](https://www.jaegertracing.io/) instance which collects traces on interactions with the provisioned instance of Antidote for your content. If you are able to see your content in the preview instance's lesson catalog, but are encountering some kind of problem when trying to launch a lesson, this may contain useful information.
+Once you've made the necessary changes to resolve any problems that have come up until now, you should get something that looks like the below screenshot, indicating a successful preview deployment.
 
+![](../.gitbook/assets/4-build-success.png)
 
+The check annotated with the number "1" is the main preview check, and you can click "Details" to be taken to a page that contains not only the link to your preview, but some other helpful troubleshooting information. The check labeled "2" contains logs for the preview infrastructure itself. Combined, these should provide you with some tools to troubleshoot if things go wrong, so do check them out.
+
+If you click on "Details" for the main preview check, you'll see the following page:
+
+![](../.gitbook/assets/4b-build-success-details.png)
+
+When you click the "Open Preview" link contained there, you'll notice it will take you to a semi-random URL, like:
+
+```text
+https://preview-123abcde.nrelabs.io/
+```
+
+This is a randomly-generated URL for the preview for your pull request, and a new one is generated every time you make a change. This is not just a single lesson, but rather a self-contained instance of the **full NRE Labs platform**. This means that your preview URL will take you to what looks like the main NRE Labs site, but in fact this site is updated with the changes you've made. So, to see your changes, go through the lesson catalog and find your lesson, and launch it, just like you would on the main NRE Labs site.
+
+More than likely, you'll still want to change things. Maybe the lesson works great, but you made a typo, or forgot to include a command in the lesson guide. Or maybe you forgot to install a dependency in the endpoint image. This is fine, and expected - simply continue to push commits to the branch you pushed as part of opening a Pull Request in the previous step, and a new preview will be built from the beginning.
+
+> Please try to consolidate your commits, so the preview system can keep up with generating previews for everyone. Don't just push a bunch of small commits and minor changes, rather, try to bunch your changes into a few commits and push when you feel you have made all the changes you wanted to make. The project maintainers reserve the right to close Pull Requests and take other preventative actions in response to abusive behavior.
 

@@ -17,15 +17,13 @@ There are a few options you should consider before you decide to create a new im
 1. There are a number of existing images that are designed to be very multi-purpose. For instance, the `utility` image comes with Python and a bunch of automation-related libraries pre-installed.
 2. If you just want to share some basic files or scripts into the lesson environment, consider using an existing image like `utility`, and using NRE Labs' built-in [directory mapping](../antidote/antidote-architecture/lesson-directory-mapping.md) to make those files available.
 3. Maybe there's an existing image that's just missing a dependency. Consider augmenting an existing image, by simply adding a step to that image's `Dockerfile`, or maybe a `requirements.txt` file if applicable.
-4. If none of these options work for you, read on to create a new image
+4. If none of these options work for you, read the [Images reference](../antidote/object-reference/images.md) for the technical details on how to create an image. You can contribute a new image on its own, or as part of a content contribution that uses this new image.
 
 > Currently the best place to see details on existing images is to look at the NRE Labs curriculum repository manually. In the future, we'll have some better tooling around this.
 
-If you got to the end of this list and have decided to create a new image or augment an existing one, you should open a Pull Request first, before you contribute any lesson content that would use it. See the [Images reference](../antidote/object-reference/images.md) for instructions on what goes into this. Note that in the pull request for your image, a maintainer may likely request that you provide an outline of your intended lesson, so they can also understand why a new image was needed.
-
 ## Commercial Software
 
-NRE Labs is aimed at educating about modern infrastructure engineering processes. While open source has had a dramatic impact on this space over the last decade, which is well-represented by the presence of open-source in the NRE Labs curriculum, it's not possible for the NRE Labs project to **only** include open source software. Most infrastructure professionals are not able to avoid commercial software entirely, and neither can this curriculum.
+NRE Labs is aimed at educating about modern infrastructure engineering processes. While open source software has had a dramatic impact on this space over the last decade \(which is well-represented by the presence of open-source in the NRE Labs curriculum\) it's not possible for the NRE Labs project to **only** include open source software. Most infrastructure professionals are not able to avoid commercial software entirely, and neither can this curriculum.
 
 All commercial software in the curriculum will continue to adhere to the [Curriculum Quality Standards](curriculum-quality-standards.md). Whether open source or commercial, the technology is never the sole focus of the content - it is the skill-sets that a learner can acquire. While we'll continue to have a healthy mix of open and closed software, no matter what, the focus will be on the content and improving the skills of the infrastructure professional.
 

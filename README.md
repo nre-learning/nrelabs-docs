@@ -1,3 +1,6 @@
+| :exclamation:  NOTE - this project has been archived. Please see [this blog post](https://nrelabs.io/2021/12/goodbye-for-now/) for more details.  :exclamation:  |
+|-----------------------------------------|
+
 # Welcome!
 
 [NRE Labs](https://nrelabs.io/) is an open-source project and website for making it easy to learn advanced infrastructure topics like automation. It accomplishes this by using real virtual environments that are provisioned on-demand and presented interactively in your web browser.
